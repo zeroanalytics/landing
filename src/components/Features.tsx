@@ -1,105 +1,90 @@
 export default function Features() {
-  const features = [
-    {
-      title: 'Zero Infrastructure',
-      description: 'Single binary deployment with embedded SQLite. No Docker, no containers, no complexity.',
-      icon: '🚀'
-    },
-    {
-      title: 'Privacy First',
-      description: 'GDPR/CCPA compliant by design. No cookies, no tracking, no user profiling.',
-      icon: '🔒'
-    },
-    {
-      title: 'Auto-Scaling',
-      description: 'Intelligent SQLite → ClickHouse migration when you need the performance.',
-      icon: '📈'
-    },
-    {
-      title: 'Lightning Fast',
-      description: 'Sub-3KB JavaScript tracker. Minimal impact on your site performance.',
-      icon: '⚡'
-    },
-    {
-      title: 'Real-time',
-      description: 'Live visitor tracking and dashboard updates. See what\'s happening now.',
-      icon: '📊'
-    },
-    {
-      title: 'Open Source',
-      description: 'AGPL v3 licensed. Self-host or use our managed service.',
-      icon: '🌟'
-    }
-  ]
-
   return (
-    <section id="features" className="section-padding bg-gray-50">
-      <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Built for Modern Privacy
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Zero Analytics is designed from the ground up for privacy-conscious developers 
-            who need reliable analytics without the complexity.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={feature.title}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-3xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                {feature.title}
+    <section
+      id="features"
+      className="brutalist-bg section-padding border-b-8 border-black"
+    >
+      <div className="container-max px-0">
+        <div className="max-w-screen-md mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-widest">
+              Delivers On Every Marketing Promise
+            </h2>
+            <p className="text-xl text-black max-w-2xl mx-auto font-bold uppercase tracking-wide">
+              Zero dependencies. Zero complexity. Zero compromises on privacy.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            <div className="brutalist-border bg-gray-100 p-8 flex flex-col gap-4">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+                Zero Config Deployment
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
+              <p className="text-lg text-black font-bold">
+                Single script tag setup in 30 seconds. No Docker, no database setup, no configuration files required.
+              </p>
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+                Lightning Fast & Lightweight  
+              </h3>
+              <p className="text-lg text-black font-bold">
+                Ultra-fast loading at just 2.3KB. Optimized performance that won&apos;t slow down your site.
+              </p>
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+                Enterprise Grade Quality
+              </h3>
+              <p className="text-lg text-black font-bold">
+                Battle-tested reliability with comprehensive quality assurance. Built to scale from startup to enterprise.
+              </p>
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+                Works Everywhere
+              </h3>
+              <p className="text-lg text-black font-bold">
+                Drop into any website or app. Supports all modern frameworks and automatically adapts to your setup.
               </p>
             </div>
-          ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <div className="bg-white p-8 rounded-xl shadow-sm max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Competitive Advantage
-            </h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="py-2 px-4 font-medium">Platform</th>
-                    <th className="py-2 px-4 font-medium">Deployment</th>
-                    <th className="py-2 px-4 font-medium">Bundle Size</th>
-                    <th className="py-2 px-4 font-medium">Privacy</th>
-                  </tr>
-                </thead>
-                <tbody className="text-sm">
-                  <tr className="border-b border-gray-100">
-                    <td className="py-2 px-4 font-medium text-primary-600">Zero Analytics</td>
-                    <td className="py-2 px-4">30 seconds</td>
-                    <td className="py-2 px-4">&lt;3KB</td>
-                    <td className="py-2 px-4">Built-in</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="py-2 px-4">Plausible</td>
-                    <td className="py-2 px-4">30+ minutes</td>
-                    <td className="py-2 px-4">~5KB</td>
-                    <td className="py-2 px-4">Good</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="py-2 px-4">Google Analytics</td>
-                    <td className="py-2 px-4">5 minutes</td>
-                    <td className="py-2 px-4">~15KB</td>
-                    <td className="py-2 px-4">Poor</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="brutalist-border bg-gray-100 p-8 flex flex-col gap-4">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+                Privacy-First (Compliance Ready)
+              </h3>
+              <p className="text-lg text-black font-bold">
+                Cookie-free, GDPR compliant by design. Bot detection and path masking included automatically.
+              </p>
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+                Smart Automation
+              </h3>
+              <p className="text-lg text-black font-bold">
+                Intelligent setup that handles everything automatically. No manual configuration or tweaking required.
+              </p>
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+                Powerful Analytics Built-In
+              </h3>
+              <p className="text-lg text-black font-bold">
+                Advanced features like user tracking, custom events, and performance monitoring included out of the box.
+              </p>
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+                Rock Solid Reliability
+              </h3>
+              <p className="text-lg text-black font-bold">
+                Built to never break your site. Handles errors gracefully and captures data even during page transitions.
+              </p>
             </div>
+          </div>
+          
+          <div className="mt-16 brutalist-border bg-black p-10 text-white">
+            <h3 className="text-3xl font-extrabold text-white uppercase tracking-widest mb-8 text-center">
+              Production Ready - Copy, Paste, Deploy
+            </h3>
+            <div className="bg-gray-900 brutalist-border border-white p-8 font-mono text-left max-w-3xl mx-auto">
+              <div className="text-gray-400 text-lg mb-2">&lt;!-- Copy this single line into your &lt;head&gt; --&gt;</div>
+              <div className="text-green-400 text-lg mb-2">&lt;script src=&quot;https://unpkg.com/@zeroanalytics/zero-js&quot;</div>
+              <div className="text-green-400 text-lg mb-2">        data-site=&quot;your-site.com&quot;</div>
+              <div className="text-green-400 text-lg mb-4">        data-endpoint=&quot;https://your-analytics.com/collect&quot; defer&gt;&lt;/script&gt;</div>
+              <div className="text-white text-xl font-bold mt-6 border-t-2 border-white pt-4">
+                ANALYTICS RUNNING • GDPR COMPLIANT • 2.3KB LOADED
+              </div>
+            </div>
+            <p className="text-white text-lg font-bold text-center mt-6 uppercase tracking-wide">
+              No servers. No databases. No configuration. Just analytics.
+            </p>
           </div>
         </div>
       </div>

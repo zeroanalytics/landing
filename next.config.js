@@ -1,15 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // API routes enabled for Vercel serverless functions
   trailingSlash: true,
   images: {
     unoptimized: true
-  },
-  eslint: {
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    ignoreBuildErrors: true
   }
 }
 

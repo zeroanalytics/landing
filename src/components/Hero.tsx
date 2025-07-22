@@ -1,39 +1,61 @@
 export default function Hero() {
   return (
-    <section className="gradient-bg section-padding pt-24 pb-20">
-      <div className="container-max">
-        <div className="text-center animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Analytics that deploys in
-            <span className="block text-yellow-300">30 seconds</span>
+    <section className="brutalist-bg section-padding pt-28 pb-12 border-b-8 border-black min-h-[60vh]">
+      <div className="container-max px-0">
+        <div className="max-w-screen-md mx-auto px-4 text-center animate-fade-in">
+          <h1
+            className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-black mt-8 sm:mt-16 mb-8 sm:mb-12 leading-tight uppercase tracking-widest relative"
+            style={{
+              textShadow: '1px 1px 0 #fff, 3px 3px 0 #d1d5db, 6px 6px 0 #111',
+              letterSpacing: '0.08em',
+              lineHeight: '1.1',
+            }}
+          >
+            Simple, Fast, Modern Web Analytics
           </h1>
-          
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Privacy-first analytics with zero dependencies. 
-            Single binary deployment, GDPR compliant by design.
+          <p className="text-lg sm:text-2xl text-black mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-bold uppercase tracking-wide">
+            Analytics that deploys in 30 seconds with zero dependencies.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a href="#early-access" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-10 sm:mb-16 w-full">
+            <a
+              href="#early-access"
+              className="btn-primary text-lg sm:text-2xl w-full sm:w-auto"
+            >
               Get Early Access
             </a>
-            <a href="https://github.com/zeroanalytics/analytics" className="btn-secondary" target="_blank" rel="noopener noreferrer">
-              View on GitHub
+            <a
+              href="#"
+              className="btn-secondary text-lg sm:text-2xl w-full sm:w-auto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Live Demo
             </a>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white/80 text-center max-w-4xl mx-auto">
-            <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="text-3xl font-bold text-yellow-300">30s</div>
-              <div className="text-sm">Deployment Time</div>
+          <div className="flex flex-col md:flex-row gap-4 sm:gap-8 justify-center items-center text-black text-center max-w-4xl mx-auto mt-6 sm:mt-8 w-full">
+            <div className="brutalist-border p-4 sm:p-6 bg-gray-100 min-w-[120px] sm:min-w-[180px] w-full md:w-auto">
+              <div className="text-3xl sm:text-5xl font-extrabold text-black">
+                30s
+              </div>
+              <div className="text-base sm:text-lg font-bold uppercase tracking-widest">
+                Zero Config
+              </div>
             </div>
-            <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <div className="text-3xl font-bold text-yellow-300">&lt;3KB</div>
-              <div className="text-sm">Client Bundle Size</div>
+            <div className="brutalist-border p-4 sm:p-6 bg-gray-100 min-w-[120px] sm:min-w-[180px] w-full md:w-auto">
+              <div className="text-3xl sm:text-5xl font-extrabold text-black">
+                2.3KB
+              </div>
+              <div className="text-base sm:text-lg font-bold uppercase tracking-widest">
+                Easy Deploy
+              </div>
             </div>
-            <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              <div className="text-3xl font-bold text-yellow-300">100%</div>
-              <div className="text-sm">Privacy Compliant</div>
+            <div className="brutalist-border p-4 sm:p-6 bg-gray-100 min-w-[120px] sm:min-w-[180px] w-full md:w-auto">
+              <div className="text-3xl sm:text-5xl font-extrabold text-black">
+                0
+              </div>
+              <div className="text-base sm:text-lg font-bold uppercase tracking-widest">
+                Privacy Issues
+              </div>
             </div>
           </div>
         </div>
