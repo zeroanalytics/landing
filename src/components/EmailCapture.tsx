@@ -29,7 +29,7 @@ export default function EmailCapture() {
 
       setStatus('success')
       setMessage(
-        "Thanks for your interest! We&apos;ll notify you when Zero Analytics is ready."
+        'Thanks for your interest! We&apos;ll notify you when Zero Analytics is ready.'
       )
       setEmail('')
     } catch {

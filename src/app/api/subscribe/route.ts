@@ -8,10 +8,7 @@ export async function POST(request: NextRequest) {
     const { email, name } = await request.json()
 
     if (!email) {
-      return NextResponse.json(
-        { error: 'Email is required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Email is required' }, { status: 400 })
     }
 
     if (!MAILERLITE_API_KEY) {
@@ -23,29 +20,32 @@ export async function POST(request: NextRequest) {
     }
 
     // Add subscriber to MailerLite
-    const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${MAILERLITE_API_KEY}`,
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify({
-        email,
-        groups: [MAILERLITE_GROUP_ID],
-        fields: {
-          name: name || '',
-          source: 'zeroanalytics-landing'
+    const response = await fetch(
+      'https://connect.mailerlite.com/api/subscribers',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${MAILERLITE_API_KEY}`,
+          Accept: 'application/json',
         },
-        // Optional: Set subscriber status
-        status: 'active', // or 'unconfirmed' if you want double opt-in
-      }),
-    })
+        body: JSON.stringify({
+          email,
+          groups: [MAILERLITE_GROUP_ID],
+          fields: {
+            name: name || '',
+            source: 'zeroanalytics-landing',
+          },
+          // Optional: Set subscriber status
+          status: 'active', // or 'unconfirmed' if you want double opt-in
+        }),
+      }
+    )
 
     if (!response.ok) {
       const errorData = await response.json()
       console.error('MailerLite API error:', errorData)
-      
+
       // Handle specific MailerLite errors
       if (response.status === 422 && errorData.errors?.email) {
         return NextResponse.json(
@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
           { status: 422 }
         )
       }
-      
+
       throw new Error(`MailerLite API returned ${response.status}`)
     }
 
@@ -61,13 +61,12 @@ export async function POST(request: NextRequest) {
     console.log('Successfully added subscriber:', data.data?.email)
 
     return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Successfully subscribed to updates' 
+      {
+        success: true,
+        message: 'Successfully subscribed to updates',
       },
       { status: 200 }
     )
-
   } catch (error) {
     console.error('Subscription error:', error)
     return NextResponse.json(
