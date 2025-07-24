@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Ø Analytics - Privacy-First Analytics',
     description: 'Deploy analytics in 30 seconds with zero dependencies',
     type: 'website',
-    url: 'https://øanalytics.io',
+    url: 'https://zeroanalytics.io',
   },
   twitter: {
     card: 'summary_large_image',

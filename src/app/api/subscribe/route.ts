@@ -19,7 +19,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Add subscriber to MailerLite
     const response = await fetch(
       'https://connect.mailerlite.com/api/subscribers',
       {
@@ -36,8 +35,7 @@ export async function POST(request: NextRequest) {
             name: name || '',
             source: 'zeroanalytics-landing',
           },
-          // Optional: Set subscriber status
-          status: 'active', // or 'unconfirmed' if you want double opt-in
+          status: 'active',
         }),
       }
     )
