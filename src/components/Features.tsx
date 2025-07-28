@@ -119,10 +119,18 @@ export default function Features() {
               <table className="w-full text-left">
                 <thead className="bg-black text-white">
                   <tr>
-                    <th className="p-4 font-extrabold uppercase tracking-wide">Feature</th>
-                    <th className="p-4 font-extrabold uppercase tracking-wide text-center">Zero Analytics</th>
-                    <th className="p-4 font-extrabold uppercase tracking-wide text-center">Google Analytics</th>
-                    <th className="p-4 font-extrabold uppercase tracking-wide text-center">Plausible</th>
+                    <th className="p-4 font-extrabold uppercase tracking-wide">
+                      Feature
+                    </th>
+                    <th className="p-4 font-extrabold uppercase tracking-wide text-center">
+                      Zero Analytics
+                    </th>
+                    <th className="p-4 font-extrabold uppercase tracking-wide text-center">
+                      Google Analytics
+                    </th>
+                    <th className="p-4 font-extrabold uppercase tracking-wide text-center">
+                      Plausible
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-black font-bold">
@@ -135,8 +143,12 @@ export default function Features() {
                   <tr className="border-b-2 border-black">
                     <td className="p-4">Infrastructure Required</td>
                     <td className="p-4 text-center bg-green-100">Zero</td>
-                    <td className="p-4 text-center bg-red-100">Google Account</td>
-                    <td className="p-4 text-center bg-red-100">Docker/Server</td>
+                    <td className="p-4 text-center bg-red-100">
+                      Google Account
+                    </td>
+                    <td className="p-4 text-center bg-red-100">
+                      Docker/Server
+                    </td>
                   </tr>
                   <tr className="border-b-2 border-black">
                     <td className="p-4">Script Size</td>
@@ -148,7 +160,9 @@ export default function Features() {
                     <td className="p-4">Privacy Compliant</td>
                     <td className="p-4 text-center bg-green-100">✓ Built-in</td>
                     <td className="p-4 text-center bg-red-100">✗ Complex</td>
-                    <td className="p-4 text-center bg-yellow-100">✓ Extra cost</td>
+                    <td className="p-4 text-center bg-yellow-100">
+                      ✓ Extra cost
+                    </td>
                   </tr>
                   <tr>
                     <td className="p-4">Monthly Cost</td>

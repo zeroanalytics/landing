@@ -4,29 +4,35 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: "How is this different from Google Analytics?",
-    answer: "Zero Analytics deploys in 30 seconds with zero infrastructure. No complex setup, no privacy concerns, no massive JavaScript bundle slowing your site. Just copy one script tag and you're done."
+    question: 'How is this different from Google Analytics?',
+    answer:
+      "Zero Analytics deploys in 30 seconds with zero infrastructure. No complex setup, no privacy concerns, no massive JavaScript bundle slowing your site. Just copy one script tag and you're done.",
   },
   {
-    question: "Is this really GDPR compliant?",
-    answer: "Yes, 100%. We don't use cookies, don't track personal data, and anonymize all visitor information by design. No privacy banners or consent forms needed."
+    question: 'Is this really GDPR compliant?',
+    answer:
+      "Yes, 100%. We don't use cookies, don't track personal data, and anonymize all visitor information by design. No privacy banners or consent forms needed.",
   },
   {
-    question: "What happens when I get a lot of traffic?",
-    answer: "Zero Analytics automatically scales from SQLite to ClickHouse when needed. You'll never hit performance walls or need to migrate manually."
+    question: 'What happens when I get a lot of traffic?',
+    answer:
+      "Zero Analytics automatically scales from SQLite to ClickHouse when needed. You'll never hit performance walls or need to migrate manually.",
   },
   {
-    question: "Can I self-host this?",
-    answer: "Absolutely! Zero Analytics is open source and deploys as a single binary. Run it on any server, VPS, or even a Raspberry Pi."
+    question: 'Can I self-host this?',
+    answer:
+      'Absolutely! Zero Analytics is open source and deploys as a single binary. Run it on any server, VPS, or even a Raspberry Pi.',
   },
   {
-    question: "How accurate is the data compared to Google Analytics?",
-    answer: "More accurate for real users. We filter out bots and scrapers automatically, so you see genuine human traffic without the noise."
+    question: 'How accurate is the data compared to Google Analytics?',
+    answer:
+      'More accurate for real users. We filter out bots and scrapers automatically, so you see genuine human traffic without the noise.',
   },
   {
-    question: "What if I need more advanced features?",
-    answer: "Zero Analytics includes custom events, goal tracking, and performance monitoring out of the box. For enterprise features, we offer paid tiers."
-  }
+    question: 'What if I need more advanced features?',
+    answer:
+      'Zero Analytics includes custom events, goal tracking, and performance monitoring out of the box. For enterprise features, we offer paid tiers.',
+  },
 ]
 
 export default function FAQ() {
@@ -44,13 +50,15 @@ export default function FAQ() {
               Everything you need to know about Zero Analytics
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="brutalist-border bg-white">
                 <button
                   className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
                 >
                   <h3 className="text-xl font-extrabold text-black uppercase tracking-wide pr-4">
                     {faq.question}
