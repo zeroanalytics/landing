@@ -41,7 +41,7 @@ export default function Hero() {
             </div>
             <div className="brutalist-border p-4 sm:p-6 bg-gray-100 min-w-[120px] sm:min-w-[180px] w-full md:w-auto">
               <div className="text-3xl sm:text-5xl font-extrabold text-black">
-                3.25KB
+                3.2KB
               </div>
               <div className="text-base sm:text-lg font-bold uppercase tracking-widest">
                 Easy Deploy
