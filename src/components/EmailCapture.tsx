@@ -50,8 +50,8 @@ export default function EmailCapture() {
               Be First to Know When We Launch
             </h2>
             <p className="text-xl text-black mb-10 font-bold">
-              We're building Zero Analytics from the ground up. Join our waitlist 
-              to get notified when it's ready.
+              We&apos;re building Zero Analytics from the ground up. Join our waitlist
+              to get notified when it&apos; s ready.
             </p>
             <div className="bg-gray-100 p-10 brutalist-border max-w-md mx-auto">
               <form onSubmit={handleSubmit} className="space-y-6">
