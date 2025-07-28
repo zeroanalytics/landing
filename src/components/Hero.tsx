@@ -11,25 +11,23 @@ export default function Hero() {
               lineHeight: '1.1',
             }}
           >
-            Simple, Fast, Modern Web Analytics
+            Deploy Analytics in 30 Seconds
           </h1>
           <p className="text-lg sm:text-2xl text-black mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-bold uppercase tracking-wide">
-            Analytics that deploys in 30 seconds with zero dependencies.
+            Zero Docker, Zero Database, Zero Headaches. Just copy, paste, done.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-10 sm:mb-16 w-full">
             <a
               href="#early-access"
               className="btn-primary text-lg sm:text-2xl w-full sm:w-auto"
             >
-              Get Early Access
+              Get Early Access →
             </a>
             <a
-              href="#"
+              href="#features"
               className="btn-secondary text-lg sm:text-2xl w-full sm:w-auto"
-              target="_blank"
-              rel="noopener noreferrer"
             >
-              View Live Demo
+              See How It Works
             </a>
           </div>
           <div className="flex flex-col md:flex-row gap-4 sm:gap-8 justify-center items-center text-black text-center max-w-4xl mx-auto mt-6 sm:mt-8 w-full">

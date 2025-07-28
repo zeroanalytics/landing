@@ -109,6 +109,57 @@ export default function Features() {
               No servers. No databases. No configuration. Just analytics.
             </p>
           </div>
+
+          {/* Comparison Table */}
+          <div className="mt-20">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-12 uppercase tracking-widest text-center">
+              Zero Analytics vs The Competition
+            </h3>
+            <div className="brutalist-border bg-white overflow-x-auto">
+              <table className="w-full text-left">
+                <thead className="bg-black text-white">
+                  <tr>
+                    <th className="p-4 font-extrabold uppercase tracking-wide">Feature</th>
+                    <th className="p-4 font-extrabold uppercase tracking-wide text-center">Zero Analytics</th>
+                    <th className="p-4 font-extrabold uppercase tracking-wide text-center">Google Analytics</th>
+                    <th className="p-4 font-extrabold uppercase tracking-wide text-center">Plausible</th>
+                  </tr>
+                </thead>
+                <tbody className="text-black font-bold">
+                  <tr className="border-b-2 border-black">
+                    <td className="p-4">Setup Time</td>
+                    <td className="p-4 text-center bg-green-100">30 seconds</td>
+                    <td className="p-4 text-center bg-red-100">30+ minutes</td>
+                    <td className="p-4 text-center bg-red-100">45+ minutes</td>
+                  </tr>
+                  <tr className="border-b-2 border-black">
+                    <td className="p-4">Infrastructure Required</td>
+                    <td className="p-4 text-center bg-green-100">Zero</td>
+                    <td className="p-4 text-center bg-red-100">Google Account</td>
+                    <td className="p-4 text-center bg-red-100">Docker/Server</td>
+                  </tr>
+                  <tr className="border-b-2 border-black">
+                    <td className="p-4">Script Size</td>
+                    <td className="p-4 text-center bg-green-100">2.3KB</td>
+                    <td className="p-4 text-center bg-red-100">45KB+</td>
+                    <td className="p-4 text-center bg-yellow-100">5KB</td>
+                  </tr>
+                  <tr className="border-b-2 border-black">
+                    <td className="p-4">Privacy Compliant</td>
+                    <td className="p-4 text-center bg-green-100">✓ Built-in</td>
+                    <td className="p-4 text-center bg-red-100">✗ Complex</td>
+                    <td className="p-4 text-center bg-yellow-100">✓ Extra cost</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4">Monthly Cost</td>
+                    <td className="p-4 text-center bg-green-100">$0 - $19</td>
+                    <td className="p-4 text-center bg-yellow-100">Free*</td>
+                    <td className="p-4 text-center bg-red-100">$9 - $99</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </section>

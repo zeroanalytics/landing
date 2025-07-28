@@ -47,11 +47,11 @@ export default function EmailCapture() {
         <div className="max-w-screen-md mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-8 uppercase tracking-tighter">
-              Get Early Access
+              Be First to Know When We Launch
             </h2>
             <p className="text-xl text-black mb-10 font-bold">
-              Be the first to know when Zero Analytics launches. Join our
-              waiting list for exclusive early access.
+              We're building Zero Analytics from the ground up. Join our waitlist 
+              to get notified when it's ready.
             </p>
             <div className="bg-gray-100 p-10 brutalist-border max-w-md mx-auto">
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -93,7 +93,7 @@ export default function EmailCapture() {
                   disabled={status === 'loading' || !email}
                   className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed text-2xl"
                 >
-                  {status === 'loading' ? 'Joining...' : 'Join Waiting List'}
+                  {status === 'loading' ? 'Joining...' : 'Join Waitlist →'}
                 </button>
               </form>
               {message && (
