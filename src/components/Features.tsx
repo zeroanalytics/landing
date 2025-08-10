@@ -27,7 +27,7 @@ export default function Features() {
                 Lightning Fast & Lightweight
               </h3>
               <p className="text-lg text-black font-bold">
-                Ultra-fast loading at just 2.3KB. Optimized performance that
+                Ultra-fast loading with a tiny script. Optimized performance that
                 won&apos;t slow down your site.
               </p>
               <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
@@ -90,24 +90,41 @@ export default function Features() {
               </div>
               <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
                 {' '}
-                src=&quot;https://unpkg.com/@zeroanalytics/zero-js&quot;
+                src=&quot;https://unpkg.com/@zeroanalytics/zero-js-sdk&quot;
               </div>
               <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
                 {' '}
                 data-site=&quot;your-site.com&quot;
               </div>
-              <div className="text-green-400 text-sm sm:text-lg mb-4 break-all sm:break-normal">
+              <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
                 {' '}
                 data-endpoint=&quot;https://your-analytics.com/collect&quot;
+              </div>
+              <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
+                {' '}
+                data-track-errors=&quot;true&quot; data-web-vitals=&quot;true&quot;
+              </div>
+              <div className="text-green-400 text-sm sm:text-lg mb-4 break-all sm:break-normal">
+                {' '}
                 defer&gt;&lt;/script&gt;
               </div>
               <div className="text-white text-xl font-bold mt-6 border-t-2 border-white pt-4">
-                ANALYTICS RUNNING • 2.3KB LOADED
+                ANALYTICS RUNNING • ZERO CONFIG
               </div>
             </div>
             <p className="text-white text-lg font-bold text-center mt-6 uppercase tracking-wide">
               No servers. No databases. No configuration. Just analytics.
             </p>
+          </div>
+
+          <div className="mt-8 brutalist-border bg-white p-6">
+            <h4 className="text-xl font-extrabold text-black uppercase tracking-widest mb-4 text-center">
+              HTML‑First Custom Event Example
+            </h4>
+            <div className="bg-gray-100 brutalist-border p-4 font-mono text-sm overflow-x-auto">
+              <div>&lt;button data-zero-event=&quot;signup_click&quot; data-zero-prop-plan=&quot;pro&quot;&gt;Sign up&lt;/button&gt;</div>
+            </div>
+            <p className="text-black text-sm mt-3 text-center">No JS needed. Use <code>data-zero-event</code> and <code>data-zero-prop-*</code> to send rich events.</p>
           </div>
 
           {/* Comparison Table */}
@@ -151,10 +168,10 @@ export default function Features() {
                     </td>
                   </tr>
                   <tr className="border-b-2 border-black">
-                    <td className="p-4">Script Size</td>
-                    <td className="p-4 text-center bg-green-100">2.3KB</td>
-                    <td className="p-4 text-center bg-red-100">45KB+</td>
-                    <td className="p-4 text-center bg-yellow-100">5KB</td>
+                    <td className="p-4">Setup</td>
+                    <td className="p-4 text-center bg-green-100">1 tag, zero config</td>
+                    <td className="p-4 text-center bg-red-100">Complex</td>
+                    <td className="p-4 text-center bg-yellow-100">Some config</td>
                   </tr>
                   <tr className="border-b-2 border-black">
                     <td className="p-4">Privacy Compliant</td>
