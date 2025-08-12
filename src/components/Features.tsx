@@ -8,7 +8,7 @@ export default function Features() {
         <div className="max-w-screen-md mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-widest">
-              Delivers On Every Marketing Promise
+              One tag • No cookies • Real‑time • Zero config
             </h2>
             <p className="text-xl text-black max-w-2xl mx-auto font-bold uppercase tracking-wide">
               Zero dependencies. Zero complexity. Zero compromises on privacy.
@@ -17,18 +17,17 @@ export default function Features() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             <div className="brutalist-border bg-gray-100 p-8 flex flex-col gap-4">
               <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
-                Zero Config Deployment
+                Zero config setup
               </h3>
               <p className="text-lg text-black font-bold">
-                Single script tag setup in 30 seconds. No Docker, no database
-                setup, no configuration files required.
+                Copy one tag. Start in 60 seconds. Works anywhere.
               </p>
               <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
                 Lightning Fast & Lightweight
               </h3>
               <p className="text-lg text-black font-bold">
-                Ultra-fast loading with a tiny script. Optimized performance that
-                won&apos;t slow down your site.
+                Ultra-fast loading with a tiny script. Optimized performance
+                that won&apos;t slow down your site.
               </p>
               <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
                 Enterprise Grade Quality
@@ -47,7 +46,7 @@ export default function Features() {
             </div>
             <div className="brutalist-border bg-gray-100 p-8 flex flex-col gap-4">
               <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
-                Privacy-First (Compliance Ready)
+                Privacy‑first by default
               </h3>
               <p className="text-lg text-black font-bold">
                 Cookie-free, GDPR compliant by design. Bot detection and path
@@ -61,11 +60,11 @@ export default function Features() {
                 manual configuration or tweaking required.
               </p>
               <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
-                Powerful Analytics Built-In
+                Grows with you
               </h3>
               <p className="text-lg text-black font-bold">
-                Advanced features like user tracking, custom events, and
-                performance monitoring included out of the box.
+                Start small. Scale when you’re ready — same SDK, same API, no
+                lock‑in.
               </p>
               <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
                 Rock Solid Reliability
@@ -82,6 +81,33 @@ export default function Features() {
               Production Ready - Copy, Paste, Deploy
             </h3>
             <div className="bg-gray-900 brutalist-border border-white p-4 sm:p-8 font-mono text-left max-w-full lg:max-w-6xl xl:max-w-7xl mx-auto overflow-x-auto">
+              <div className="text-white text-lg font-bold mb-4">
+                Quickstart (3 steps)
+              </div>
+              <ol className="list-decimal ml-5 text-sm sm:text-base text-gray-100 mb-6">
+                <li className="mb-2">Build & run locally</li>
+              </ol>
+              <pre className="text-green-400 text-sm sm:text-lg mb-6 whitespace-pre-wrap">{`go build -o analytics ./cmd/analytics
+./analytics serve --dev`}</pre>
+              <ol
+                className="list-decimal ml-5 text-sm sm:text-base text-gray-100 mb-6"
+                start={2}
+              >
+                <li className="mb-2">Include the tracker in your site</li>
+              </ol>
+              <pre className="text-green-400 text-sm sm:text-lg mb-6 whitespace-pre-wrap">{`<script src="https://unpkg.com/@zeroanalytics/zero-js-sdk"
+  data-site="your-site.com"
+  data-endpoint="https://your-analytics.com/api/collect"
+  defer></script>`}</pre>
+              <ol
+                className="list-decimal ml-5 text-sm sm:text-base text-gray-100 mb-6"
+                start={3}
+              >
+                <li className="mb-2">Send a test event (optional)</li>
+              </ol>
+              <pre className="text-green-400 text-sm sm:text-lg mb-6 whitespace-pre-wrap">{`curl -X POST "http://localhost:8080/api/collect" \
+  -H "Content-Type: application/json" \
+  -d '{"type":"pageview","site":"your-site.com","path":"/"}'`}</pre>
               <div className="text-gray-400 text-sm sm:text-lg mb-4">
                 &lt;!-- Copy this into your &lt;head&gt; --&gt;
               </div>
@@ -102,7 +128,8 @@ export default function Features() {
               </div>
               <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
                 {' '}
-                data-track-errors=&quot;true&quot; data-web-vitals=&quot;true&quot;
+                data-track-errors=&quot;true&quot;
+                data-web-vitals=&quot;true&quot;
               </div>
               <div className="text-green-400 text-sm sm:text-lg mb-4 break-all sm:break-normal">
                 {' '}
@@ -122,9 +149,15 @@ export default function Features() {
               HTML‑First Custom Event Example
             </h4>
             <div className="bg-gray-100 brutalist-border p-4 font-mono text-sm overflow-x-auto">
-              <div>&lt;button data-zero-event=&quot;signup_click&quot; data-zero-prop-plan=&quot;pro&quot;&gt;Sign up&lt;/button&gt;</div>
+              <div>
+                &lt;button data-zero-event=&quot;signup_click&quot;
+                data-zero-prop-plan=&quot;pro&quot;&gt;Sign up&lt;/button&gt;
+              </div>
             </div>
-            <p className="text-black text-sm mt-3 text-center">No JS needed. Use <code>data-zero-event</code> and <code>data-zero-prop-*</code> to send rich events.</p>
+            <p className="text-black text-sm mt-3 text-center">
+              No JS needed. Use <code>data-zero-event</code> and{' '}
+              <code>data-zero-prop-*</code> to send rich events.
+            </p>
           </div>
 
           {/* Comparison Table */}
@@ -169,9 +202,13 @@ export default function Features() {
                   </tr>
                   <tr className="border-b-2 border-black">
                     <td className="p-4">Setup</td>
-                    <td className="p-4 text-center bg-green-100">1 tag, zero config</td>
+                    <td className="p-4 text-center bg-green-100">
+                      1 tag, zero config
+                    </td>
                     <td className="p-4 text-center bg-red-100">Complex</td>
-                    <td className="p-4 text-center bg-yellow-100">Some config</td>
+                    <td className="p-4 text-center bg-yellow-100">
+                      Some config
+                    </td>
                   </tr>
                   <tr className="border-b-2 border-black">
                     <td className="p-4">Privacy Compliant</td>

@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="brutalist-bg section-padding pt-28 pb-12 border-b-8 border-black min-h-[60vh]">
+    <section className="brutalist-bg section-padding pt-28 pb-12 border-b-4 border-black min-h-[60vh]">
       <div className="container-max px-0">
         <div className="max-w-screen-md mx-auto px-4 text-center animate-fade-in">
           <h1
@@ -13,8 +13,8 @@ export default function Hero() {
           >
             Deploy Analytics in 30 Seconds
           </h1>
-          <p className="text-lg sm:text-2xl text-black mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-bold uppercase tracking-wide">
-            Zero Docker, Zero Database, Zero Headaches. Just copy, paste, done.
+          <p className="text-lg sm:text-2xl text-black mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-semibold whitespace-pre-line">
+            {`Zero Docker, Zero Database, Zero Headaches.\nJust copy, paste, done.`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-10 sm:mb-16 w-full">
             <a
@@ -35,24 +35,24 @@ export default function Hero() {
               <div className="text-3xl sm:text-5xl font-extrabold text-black">
                 30s
               </div>
-              <div className="text-base sm:text-lg font-bold uppercase tracking-widest">
-                Zero Config
+              <div className="text-base sm:text-lg font-semibold">
+                Zero config
               </div>
             </div>
             <div className="brutalist-border p-4 sm:p-6 bg-gray-100 min-w-[120px] sm:min-w-[180px] w-full md:w-auto">
               <div className="text-3xl sm:text-5xl font-extrabold text-black">
-                Tiny
+                Live
               </div>
-              <div className="text-base sm:text-lg font-bold uppercase tracking-widest">
-                Easy Deploy
+              <div className="text-base sm:text-lg font-semibold">
+                Real‑time
               </div>
             </div>
             <div className="brutalist-border p-4 sm:p-6 bg-gray-100 min-w-[120px] sm:min-w-[180px] w-full md:w-auto">
               <div className="text-3xl sm:text-5xl font-extrabold text-black">
-                0
+                ∞
               </div>
-              <div className="text-base sm:text-lg font-bold uppercase tracking-widest">
-                Privacy Issues
+              <div className="text-base sm:text-lg font-semibold">
+                Grows with you
               </div>
             </div>
           </div>
