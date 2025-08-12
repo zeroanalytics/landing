@@ -43,7 +43,7 @@ export default function FAQ() {
       <div className="container-max px-0">
         <div className="max-w-screen-md mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-widest">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-tight font-sans">
               Questions? We Have Answers.
             </h2>
             <p className="text-xl text-black max-w-2xl mx-auto font-bold uppercase tracking-wide">
@@ -60,7 +60,7 @@ export default function FAQ() {
                     setOpenIndex(openIndex === index ? null : index)
                   }
                 >
-                  <h3 className="text-xl font-extrabold text-black uppercase tracking-wide pr-4">
+                  <h3 className="text-xl font-extrabold text-black uppercase tracking-tight font-sans pr-4">
                     {faq.question}
                   </h3>
                   <span className="text-2xl font-extrabold text-black flex-shrink-0">

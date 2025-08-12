@@ -11,7 +11,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight uppercase font-mono">
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tighter uppercase font-sans">
                 Zero Analytics
               </h1>
             </div>
@@ -72,7 +72,10 @@ export default function Header() {
               >
                 GitHub
               </a>
-              <a href="#early-access" className="block btn btn-accent btn-md mt-2 w-full text-center">
+              <a
+                href="#early-access"
+                className="block btn btn-accent btn-md mt-2 w-full text-center"
+              >
                 Get Early Access
               </a>
             </div>

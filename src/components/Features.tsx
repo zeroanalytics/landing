@@ -7,7 +7,7 @@ export default function Features() {
       <div className="container-max px-0">
         <div className="max-w-screen-md mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-tight font-mono">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-tight font-sans">
               One tag • No cookies • Real‑time • Zero config
             </h2>
             <p className="text-xl text-black max-w-2xl mx-auto font-bold uppercase tracking-wide">
@@ -16,27 +16,27 @@ export default function Features() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="card bg-gray-100 p-8 flex flex-col gap-4">
-              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
                 Zero config setup
               </h3>
               <p className="text-lg text-black font-bold">
                 Copy one tag. Start in 60 seconds. Works anywhere.
               </p>
-              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
                 Lightning Fast & Lightweight
               </h3>
               <p className="text-lg text-black font-bold">
                 Ultra-fast loading with a tiny script. Optimized performance
                 that won&apos;t slow down your site.
               </p>
-              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
                 Enterprise Grade Quality
               </h3>
               <p className="text-lg text-black font-bold">
                 Battle-tested reliability with comprehensive quality assurance.
                 Built to scale from startup to enterprise.
               </p>
-              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
                 Works Everywhere
               </h3>
               <p className="text-lg text-black font-bold">
@@ -45,28 +45,28 @@ export default function Features() {
               </p>
             </div>
             <div className="card bg-gray-100 p-8 flex flex-col gap-4">
-              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
                 Privacy‑first by default
               </h3>
               <p className="text-lg text-black font-bold">
                 Cookie-free, GDPR compliant by design. Bot detection and path
                 masking included automatically.
               </p>
-              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
                 Smart Automation
               </h3>
               <p className="text-lg text-black font-bold">
                 Intelligent setup that handles everything automatically. No
                 manual configuration or tweaking required.
               </p>
-              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
                 Grows with you
               </h3>
               <p className="text-lg text-black font-bold">
                 Start small. Scale when you’re ready — same SDK, same API, no
                 lock‑in.
               </p>
-              <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
+              <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
                 Rock Solid Reliability
               </h3>
               <p className="text-lg text-black font-bold">
@@ -77,66 +77,64 @@ export default function Features() {
           </div>
 
           <div className="mt-16 brutalist-border bg-black p-10 text-white">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white uppercase tracking-widest mb-8 text-center px-2">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white uppercase tracking-tight font-sans mb-8 text-center px-2">
               Production Ready - Copy, Paste, Deploy
             </h3>
             <div className="bg-gray-900 brutalist-border border-white p-4 sm:p-8 font-mono text-left max-w-full lg:max-w-6xl xl:max-w-7xl mx-auto overflow-x-auto">
-              <div className="text-white text-lg font-bold mb-4">
+              <div className="text-white text-xs sm:text-sm font-bold mb-4">
                 Quickstart (3 steps)
               </div>
-              <ol className="list-decimal ml-5 text-sm sm:text-base text-gray-100 mb-6">
+              <ol className="list-decimal ml-5 text-xs sm:text-sm text-gray-100 mb-4">
                 <li className="mb-2">Build & run locally</li>
               </ol>
-              <pre className="text-green-400 text-sm sm:text-lg mb-6 whitespace-pre-wrap">{`go build -o analytics ./cmd/analytics
+              <pre className="text-green-400 text-xs sm:text-sm mb-4 whitespace-pre-wrap">{`go build -o analytics ./cmd/analytics
 ./analytics serve --dev`}</pre>
               <ol
-                className="list-decimal ml-5 text-sm sm:text-base text-gray-100 mb-6"
+                className="list-decimal ml-5 text-xs sm:text-sm text-gray-100 mb-4"
                 start={2}
               >
                 <li className="mb-2">Include the tracker in your site</li>
               </ol>
-              <pre className="text-green-400 text-sm sm:text-lg mb-6 whitespace-pre-wrap">{`<script src="https://unpkg.com/@zeroanalytics/zero-js-sdk"
+              <pre className="text-green-400 text-xs sm:text-sm mb-4 whitespace-pre-wrap">{`<script src="https://unpkg.com/@zeroanalytics/zero-js-sdk"
   data-site="your-site.com"
   data-endpoint="https://your-analytics.com/api/collect"
+  data-track-errors="true" data-web-vitals="true"
   defer></script>`}</pre>
               <ol
-                className="list-decimal ml-5 text-sm sm:text-base text-gray-100 mb-6"
+                className="list-decimal ml-5 text-xs sm:text-sm text-gray-100 mb-4"
                 start={3}
               >
                 <li className="mb-2">Send a test event (optional)</li>
               </ol>
-              <pre className="text-green-400 text-sm sm:text-lg mb-6 whitespace-pre-wrap">{`curl -X POST "http://localhost:8080/api/collect" \
+              <pre className="text-green-400 text-xs sm:text-sm mb-4 whitespace-pre-wrap">{`curl -X POST "http://localhost:8080/api/collect" \
   -H "Content-Type: application/json" \
   -d '{"type":"pageview","site":"your-site.com","path":"/"}'`}</pre>
-              <div className="text-gray-400 text-sm sm:text-lg mb-4">
+              <div className="text-gray-400 text-xs sm:text-sm mb-2">
                 &lt;!-- Copy this into your &lt;head&gt; --&gt;
               </div>
-              <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
+              <div className="text-green-400 text-xs sm:text-sm mb-1 break-all sm:break-normal">
                 &lt;script
               </div>
-              <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
+              <div className="text-green-400 text-xs sm:text-sm mb-1 break-all sm:break-normal">
                 {' '}
                 src=&quot;https://unpkg.com/@zeroanalytics/zero-js-sdk&quot;
               </div>
-              <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
+              <div className="text-green-400 text-xs sm:text-sm mb-1 break-all sm:break-normal">
                 {' '}
                 data-site=&quot;your-site.com&quot;
               </div>
-              <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
+              <div className="text-green-400 text-xs sm:text-sm mb-1 break-all sm:break-normal">
                 {' '}
-                data-endpoint=&quot;https://your-analytics.com/collect&quot;
+                data-endpoint=&quot;https://your-analytics.com/api/collect&quot;
               </div>
-              <div className="text-green-400 text-sm sm:text-lg mb-1 break-all sm:break-normal">
+              <div className="text-green-400 text-xs sm:text-sm mb-1 break-all sm:break-normal">
                 {' '}
                 data-track-errors=&quot;true&quot;
                 data-web-vitals=&quot;true&quot;
               </div>
-              <div className="text-green-400 text-sm sm:text-lg mb-4 break-all sm:break-normal">
+              <div className="text-green-400 text-xs sm:text-sm mb-2 break-all sm:break-normal">
                 {' '}
                 defer&gt;&lt;/script&gt;
-              </div>
-              <div className="text-white text-xl font-bold mt-6 border-t-2 border-white pt-4">
-                ANALYTICS RUNNING • ZERO CONFIG
               </div>
             </div>
             <p className="text-white text-lg font-bold text-center mt-6 uppercase tracking-wide">

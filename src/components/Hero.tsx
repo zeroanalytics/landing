@@ -3,9 +3,7 @@ export default function Hero() {
     <section className="brutalist-bg section-padding pt-28 pb-12 border-b-2 border-black min-h-[60vh]">
       <div className="container-max px-0">
         <div className="max-w-screen-md mx-auto px-4 text-center">
-          <h1
-            className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-black mt-8 sm:mt-16 mb-8 sm:mb-10 leading-tight uppercase tracking-tight font-mono"
-          >
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-black mt-8 sm:mt-16 mb-8 sm:mb-10 leading-tight uppercase tracking-tight font-sans">
             Deploy Analytics in 30 Seconds
           </h1>
           <p className="text-lg sm:text-2xl text-black mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-semibold whitespace-pre-line">

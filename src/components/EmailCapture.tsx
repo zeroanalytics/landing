@@ -46,7 +46,7 @@ export default function EmailCapture() {
       <div className="container-max px-0">
         <div className="max-w-screen-md mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-8 uppercase tracking-tight font-mono">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-8 uppercase tracking-tight font-sans">
               Be First to Know When We Launch
             </h2>
             <p className="text-xl text-black mb-10 font-bold">

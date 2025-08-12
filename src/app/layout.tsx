@@ -27,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased bg-[var(--color-bg)] text-[var(--color-ink)]">{children}</body>
+      <body className="antialiased bg-[var(--color-bg)] text-[var(--color-ink)]">
+        {children}
+      </body>
     </html>
   )
 }
