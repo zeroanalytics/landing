@@ -2,20 +2,20 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="brutalist-bg section-padding border-b-8 border-black"
+      className="brutalist-bg section-padding border-b-2 border-black"
     >
       <div className="container-max px-0">
         <div className="max-w-screen-md mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-widest">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-tight font-mono">
               One tag • No cookies • Real‑time • Zero config
             </h2>
             <p className="text-xl text-black max-w-2xl mx-auto font-bold uppercase tracking-wide">
               Zero dependencies. Zero complexity. Zero compromises on privacy.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-            <div className="brutalist-border bg-gray-100 p-8 flex flex-col gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="card bg-gray-100 p-8 flex flex-col gap-4">
               <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
                 Zero config setup
               </h3>
@@ -44,7 +44,7 @@ export default function Features() {
                 automatically adapts to your setup.
               </p>
             </div>
-            <div className="brutalist-border bg-gray-100 p-8 flex flex-col gap-4">
+            <div className="card bg-gray-100 p-8 flex flex-col gap-4">
               <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-2">
                 Privacy‑first by default
               </h3>
@@ -144,7 +144,7 @@ export default function Features() {
             </p>
           </div>
 
-          <div className="mt-8 brutalist-border bg-white p-6">
+          <div className="mt-8 card bg-white p-6">
             <h4 className="text-xl font-extrabold text-black uppercase tracking-widest mb-4 text-center">
               HTML‑First Custom Event Example
             </h4>
@@ -165,9 +165,9 @@ export default function Features() {
             <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-12 uppercase tracking-widest text-center">
               Zero Analytics vs The Competition
             </h3>
-            <div className="brutalist-border bg-white overflow-x-auto">
+            <div className="card bg-white overflow-x-auto">
               <table className="w-full text-left">
-                <thead className="bg-black text-white">
+                <thead className="bg-black/95 text-white">
                   <tr>
                     <th className="p-4 font-extrabold uppercase tracking-wide">
                       Feature
@@ -184,13 +184,13 @@ export default function Features() {
                   </tr>
                 </thead>
                 <tbody className="text-black font-bold">
-                  <tr className="border-b-2 border-black">
+                  <tr className="border-b border-black/80">
                     <td className="p-4">Setup Time</td>
                     <td className="p-4 text-center bg-green-100">30 seconds</td>
                     <td className="p-4 text-center bg-red-100">30+ minutes</td>
                     <td className="p-4 text-center bg-red-100">45+ minutes</td>
                   </tr>
-                  <tr className="border-b-2 border-black">
+                  <tr className="border-b border-black/80">
                     <td className="p-4">Infrastructure Required</td>
                     <td className="p-4 text-center bg-green-100">Zero</td>
                     <td className="p-4 text-center bg-red-100">
@@ -200,7 +200,7 @@ export default function Features() {
                       Docker/Server
                     </td>
                   </tr>
-                  <tr className="border-b-2 border-black">
+                  <tr className="border-b border-black/80">
                     <td className="p-4">Setup</td>
                     <td className="p-4 text-center bg-green-100">
                       1 tag, zero config
@@ -210,7 +210,7 @@ export default function Features() {
                       Some config
                     </td>
                   </tr>
-                  <tr className="border-b-2 border-black">
+                  <tr className="border-b border-black/80">
                     <td className="p-4">Privacy Compliant</td>
                     <td className="p-4 text-center bg-green-100">✓ Built-in</td>
                     <td className="p-4 text-center bg-red-100">✗ Complex</td>

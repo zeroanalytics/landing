@@ -41,19 +41,19 @@ export default function EmailCapture() {
   return (
     <section
       id="early-access"
-      className="brutalist-bg section-padding border-b-8 border-black"
+      className="brutalist-bg section-padding border-b-2 border-black"
     >
       <div className="container-max px-0">
         <div className="max-w-screen-md mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-8 uppercase tracking-tighter">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-8 uppercase tracking-tight font-mono">
               Be First to Know When We Launch
             </h2>
             <p className="text-xl text-black mb-10 font-bold">
               We&apos;re building Zero Analytics from the ground up. Join our
               waitlist to get notified when it&apos; s ready.
             </p>
-            <div className="bg-gray-100 p-10 brutalist-border max-w-md mx-auto">
+            <div className="bg-gray-100 p-10 card max-w-md mx-auto">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="sr-only">
@@ -66,7 +66,7 @@ export default function EmailCapture() {
                     autoComplete="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-6 py-4 border-4 border-black bg-white text-black font-extrabold text-lg rounded-none focus:outline-none focus:ring-4 focus:ring-gray-400 focus:border-black"
+                    className="w-full px-6 py-4 border-2 border-black bg-white text-black font-extrabold text-lg rounded-none focus:outline-none focus:ring-4 focus:ring-gray-300 focus:border-black"
                     placeholder="Your name (optional)"
                     disabled={status === 'loading'}
                   />
@@ -83,7 +83,7 @@ export default function EmailCapture() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-6 py-4 border-4 border-black bg-white text-black font-extrabold text-lg rounded-none focus:outline-none focus:ring-4 focus:ring-gray-400 focus:border-black"
+                    className="w-full px-6 py-4 border-2 border-black bg-white text-black font-extrabold text-lg rounded-none focus:outline-none focus:ring-4 focus:ring-gray-300 focus:border-black"
                     placeholder="Enter your email address"
                     disabled={status === 'loading'}
                   />
@@ -98,7 +98,7 @@ export default function EmailCapture() {
               </form>
               {message && (
                 <div
-                  className={`mt-6 p-4 brutalist-border text-lg font-bold ${status === 'success' ? 'bg-gray-200 text-black' : 'bg-gray-300 text-black'}`}
+                  className={`mt-6 p-4 card text-lg font-bold ${status === 'success' ? 'bg-gray-200 text-black' : 'bg-gray-300 text-black'}`}
                 >
                   {message}
                 </div>
@@ -108,19 +108,19 @@ export default function EmailCapture() {
               </p>
             </div>
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
-              <div className="brutalist-border p-6 bg-gray-100">
+              <div className="card p-6 bg-gray-100">
                 <h3 className="font-extrabold mb-2 uppercase">Open Source</h3>
                 <p className="text-lg font-bold">
                   Full source code available on GitHub
                 </p>
               </div>
-              <div className="brutalist-border p-6 bg-gray-100">
+              <div className="card p-6 bg-gray-100">
                 <h3 className="font-extrabold mb-2 uppercase">Self-Hosted</h3>
                 <p className="text-lg font-bold">
                   Deploy on your own infrastructure
                 </p>
               </div>
-              <div className="brutalist-border p-6 bg-gray-100">
+              <div className="card p-6 bg-gray-100">
                 <h3 className="font-extrabold mb-2 uppercase">
                   Managed Service
                 </h3>
@@ -128,7 +128,7 @@ export default function EmailCapture() {
               </div>
             </div>
             <div className="mt-20 max-w-2xl mx-auto text-left">
-              <div className="brutalist-border bg-white p-8">
+              <div className="card bg-white p-8">
                 <h3 className="text-2xl font-extrabold text-black uppercase tracking-widest mb-4">
                   Simplicity & Speed
                 </h3>

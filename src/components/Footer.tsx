@@ -1,11 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="brutalist-bg text-black border-t-8 border-black">
+    <footer className="brutalist-bg text-black border-t-2 border-black/90">
       <div className="container-max px-4 sm:px-6 lg:px-8">
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-3xl font-extrabold text-black mb-4 uppercase">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-black mb-4 uppercase font-mono">
                 Zero Analytics
               </h3>
               <p className="text-lg font-bold mb-6 max-w-md">
@@ -15,7 +15,7 @@ export default function Footer() {
               <div className="flex space-x-4 mb-6">
                 <a
                   href="https://github.com/zeroanalytics"
-                  className="text-black hover:text-white border-2 border-black p-2 bg-white"
+                  className="text-black hover:text-black border-2 border-black p-2 bg-white hover:border-[var(--color-accent)]"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -57,7 +57,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#features"
-                    className="text-black font-bold border-b-2 border-black"
+                    className="text-black font-bold border-b-2 border-black hover:border-[var(--color-accent)]"
                   >
                     Features
                   </a>
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="https://github.com/zeroanalytics/analytics"
-                    className="text-black font-bold border-b-2 border-black"
+                    className="text-black font-bold border-b-2 border-black hover:border-[var(--color-accent)]"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -75,7 +75,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="https://github.com/zeroanalytics/tracker"
-                    className="text-black font-bold border-b-2 border-black"
+                    className="text-black font-bold border-b-2 border-black hover:border-[var(--color-accent)]"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -86,7 +86,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t-4 border-black py-6">
+        <div className="border-t-2 border-black/90 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-black text-lg font-bold">
               © {new Date().getFullYear()} Ø Analytics. All rights reserved.
