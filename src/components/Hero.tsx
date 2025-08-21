@@ -1,40 +1,31 @@
 export default function Hero() {
   return (
-    <section className="gradient-bg section-padding pt-24 pb-20">
-      <div className="container-max">
-        <div className="text-center animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Analytics that deploys in
-            <span className="block text-yellow-300">30 seconds</span>
+    <section
+      className="section-padding pt-28 pb-12 border-b-2 border-black min-h-[60vh]"
+      style={{ backgroundColor: 'var(--color-yellow)' }}
+    >
+      <div className="container-max px-0">
+        <div className="max-w-screen-md mx-auto px-4 text-center">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-black mt-8 sm:mt-16 mb-8 sm:mb-10 leading-tight uppercase tracking-tight font-sans">
+            Deploy Analytics in 30 Seconds
           </h1>
-          
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Privacy-first analytics with zero dependencies. 
-            Single binary deployment, GDPR compliant by design.
+          <p className="text-lg sm:text-2xl text-black mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-semibold whitespace-pre-line">
+            {`Zero Docker, Zero Database, Zero Headaches.\nJust copy, paste, done.`}
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a href="#early-access" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
-              Get Early Access
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 sm:mb-16 w-full">
+            <a
+              href="#early-access"
+              className="btn btn-accent btn-lg w-full sm:w-auto"
+            >
+              Get Early Access →
             </a>
-            <a href="https://github.com/zeroanalytics/analytics" className="btn-secondary" target="_blank" rel="noopener noreferrer">
-              View on GitHub
+            <a
+              href="#features"
+              className="btn btn-lg w-full sm:w-auto text-black border-black"
+              style={{ backgroundColor: 'var(--color-button)' }}
+            >
+              See How It Works
             </a>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white/80 text-center max-w-4xl mx-auto">
-            <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="text-3xl font-bold text-yellow-300">30s</div>
-              <div className="text-sm">Deployment Time</div>
-            </div>
-            <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <div className="text-3xl font-bold text-yellow-300">&lt;3KB</div>
-              <div className="text-sm">Client Bundle Size</div>
-            </div>
-            <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              <div className="text-3xl font-bold text-yellow-300">100%</div>
-              <div className="text-sm">Privacy Compliant</div>
-            </div>
           </div>
         </div>
       </div>
