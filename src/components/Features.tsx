@@ -1,104 +1,101 @@
-export default function Features() {
-  const features = [
-    {
-      title: 'Zero Infrastructure',
-      description: 'Single binary deployment with embedded SQLite. No Docker, no containers, no complexity.',
-      icon: '🚀'
-    },
-    {
-      title: 'Privacy First',
-      description: 'GDPR/CCPA compliant by design. No cookies, no tracking, no user profiling.',
-      icon: '🔒'
-    },
-    {
-      title: 'Auto-Scaling',
-      description: 'Intelligent SQLite → ClickHouse migration when you need the performance.',
-      icon: '📈'
-    },
-    {
-      title: 'Lightning Fast',
-      description: 'Sub-3KB JavaScript tracker. Minimal impact on your site performance.',
-      icon: '⚡'
-    },
-    {
-      title: 'Real-time',
-      description: 'Live visitor tracking and dashboard updates. See what\'s happening now.',
-      icon: '📊'
-    },
-    {
-      title: 'Open Source',
-      description: 'AGPL v3 licensed. Self-host or use our managed service.',
-      icon: '🌟'
-    }
-  ]
+const features = [
+  {
+    title: 'Tiny footprint',
+    description:
+      'Ship a 3 KB async module script that keeps Lighthouse scores happy and disappears when disabled.',
+  },
+  {
+    title: 'Richer out-of-the-box data',
+    description:
+      'Capture paths, referrers, campaigns, and timing in the same stream so you skip custom plumbing.',
+  },
+  {
+    title: 'Spend stays yours',
+    description:
+      'Run the bundled SQLite binary for free, then toggle ClickHouse dual-write only when you actually need scale.',
+  },
+  {
+    title: 'Indie-paced roadmap',
+    description:
+      'We ship weekly. Feature requests land fast, not in a quarterly enterprise queue.',
+  },
+]
 
+export default function Features() {
   return (
-    <section id="features" className="section-padding bg-gray-50">
-      <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Built for Modern Privacy
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Zero Analytics is designed from the ground up for privacy-conscious developers 
-            who need reliable analytics without the complexity.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={feature.title}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-3xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
+    <section
+      id="features"
+      className="section-padding border-b-2 border-black"
+      style={{ backgroundColor: 'var(--color-mint)' }}
+    >
+      <div className="container-max px-0">
+        <div className="max-w-screen-lg mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-tight font-sans">
+              Built to give small teams bigger insights
+            </h2>
+            <p className="text-xl text-black max-w-2xl mx-auto font-bold uppercase tracking-wide">
+              Keep the script tiny, the data rich, and the bill predictable.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 items-stretch">
+            <div className="card bg-gray-100 p-8 flex flex-col gap-6 xl:col-span-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {features.map((feature) => (
+                  <div key={feature.title}>
+                    <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-lg text-black font-bold leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <div className="bg-white p-8 rounded-xl shadow-sm max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Competitive Advantage
-            </h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="py-2 px-4 font-medium">Platform</th>
-                    <th className="py-2 px-4 font-medium">Deployment</th>
-                    <th className="py-2 px-4 font-medium">Bundle Size</th>
-                    <th className="py-2 px-4 font-medium">Privacy</th>
-                  </tr>
-                </thead>
-                <tbody className="text-sm">
-                  <tr className="border-b border-gray-100">
-                    <td className="py-2 px-4 font-medium text-primary-600">Zero Analytics</td>
-                    <td className="py-2 px-4">30 seconds</td>
-                    <td className="py-2 px-4">&lt;3KB</td>
-                    <td className="py-2 px-4">Built-in</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="py-2 px-4">Plausible</td>
-                    <td className="py-2 px-4">30+ minutes</td>
-                    <td className="py-2 px-4">~5KB</td>
-                    <td className="py-2 px-4">Good</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="py-2 px-4">Google Analytics</td>
-                    <td className="py-2 px-4">5 minutes</td>
-                    <td className="py-2 px-4">~15KB</td>
-                    <td className="py-2 px-4">Poor</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="card bg-white border-2 border-black p-8 flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-4">
+                  Live preview
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b-2 border-black pb-2">
+                    <span className="text-lg font-bold uppercase">
+                      Pageviews (24h)
+                    </span>
+                    <span className="text-2xl font-extrabold">12,430</span>
+                  </div>
+                  <div className="flex items-center justify-between border-b-2 border-black pb-2">
+                    <span className="text-lg font-bold uppercase">
+                      Conversion
+                    </span>
+                    <span className="text-2xl font-extrabold text-green-600">
+                      4.2%
+                    </span>
+                  </div>
+                  <div className="space-y-2">
+                    {['/', '/pricing', '/docs/getting-started'].map(
+                      (path, index) => (
+                        <div
+                          key={path}
+                          className="flex items-center justify-between text-black font-bold"
+                        >
+                          <span>
+                            {index + 1}. {path}
+                          </span>
+                          <span>
+                            {[5421, 3180, 1812][index].toLocaleString()}
+                          </span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
+              <p className="text-sm text-black font-bold uppercase tracking-wide mt-6">
+                Captured with the bundled dev server — no external services
+                required.
+              </p>
             </div>
           </div>
         </div>

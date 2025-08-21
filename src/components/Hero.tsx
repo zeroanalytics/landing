@@ -1,39 +1,102 @@
+import Link from 'next/link'
+
 export default function Hero() {
   return (
-    <section className="gradient-bg section-padding pt-24 pb-20">
-      <div className="container-max">
-        <div className="text-center animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Analytics that deploys in
-            <span className="block text-yellow-300">30 seconds</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Privacy-first analytics with zero dependencies. 
-            Single binary deployment, GDPR compliant by design.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a href="#early-access" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
-              Get Early Access
-            </a>
-            <a href="https://github.com/zeroanalytics/analytics" className="btn-secondary" target="_blank" rel="noopener noreferrer">
-              View on GitHub
-            </a>
+    <section
+      className="section-padding pt-28 pb-16 border-b-2 border-black min-h-[60vh]"
+      style={{ backgroundColor: 'var(--color-yellow)' }}
+    >
+      <div className="container-max px-0">
+        <div className="max-w-5xl mx-auto text-center px-4">
+          <div
+            className="inline-flex items-center gap-3 px-6 py-3 bg-white brutalist-border uppercase text-xs sm:text-sm tracking-[0.35em] font-extrabold mb-8"
+            style={{ boxShadow: '8px 8px 0 0 #000' }}
+          >
+            <span className="text-black">
+              Ship analytics your team can actually run
+            </span>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white/80 text-center max-w-4xl mx-auto">
-            <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="text-3xl font-bold text-yellow-300">30s</div>
-              <div className="text-sm">Deployment Time</div>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl text-black leading-tight tracking-tight">
+            Launch lightweight analytics this afternoon
+          </h1>
+          <p className="mt-6 text-lg sm:text-2xl text-black font-semibold max-w-3xl mx-auto leading-relaxed">
+            Install the Zero CLI, drop in a 3 KB script, and keep richer traffic
+            data on your own hardware without paying enterprise bills.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/#early-access"
+              className="btn btn-accent btn-lg w-full sm:w-auto"
+            >
+              Launch the Zero CLI
+            </Link>
+            <Link
+              href="https://zeroanalytics.io/docs"
+              className="btn btn-ghost btn-lg w-full sm:w-auto bg-white hover:bg-yellow-200"
+            >
+              Browse the Docs
+            </Link>
+          </div>
+          <p className="mt-6 text-xs sm:text-sm uppercase tracking-[0.3em] text-black/70 font-semibold">
+            Works with static sites, SPAs, and server frameworks — no cookies,
+            no vendor SDK lock-in.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2 px-4">
+          <div
+            className="bg-white brutalist-border p-6 sm:p-8 text-left"
+            style={{ boxShadow: '10px 10px 0 0 #000' }}
+          >
+            <div className="flex items-center justify-between text-xs uppercase tracking-[0.35em] text-black/70 mb-4">
+              <span>Request</span>
+              <span>POST</span>
             </div>
-            <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <div className="text-3xl font-bold text-yellow-300">&lt;3KB</div>
-              <div className="text-sm">Client Bundle Size</div>
+            <pre className="text-sm sm:text-base font-mono leading-relaxed text-left text-black whitespace-pre-wrap">
+              {`fetch('https://localhost:3000/api/collect', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-ZA-Key': 'demo-site'
+  },
+  body: JSON.stringify({
+    type: 'pageview',
+    site: 'demo',
+    path: '/pricing'
+  })
+})`}
+            </pre>
+            <button className="mt-6 w-full btn btn-accent btn-lg">
+              Try it locally
+            </button>
+            <p className="mt-3 text-xs text-black/70 font-semibold uppercase tracking-widest">
+              Demo preview — fire up{' '}
+              <code className="bg-yellow-200 px-2 py-1">
+                ./analytics serve --dev
+              </code>{' '}
+              to stream requests locally.
+            </p>
+          </div>
+
+          <div
+            className="bg-white brutalist-border p-6 sm:p-8 flex flex-col"
+            style={{ boxShadow: '10px 10px 0 0 #000' }}
+          >
+            <div className="flex items-center justify-between text-xs uppercase tracking-[0.35em] text-black/70 mb-4">
+              <span>Live Response</span>
+              <span>JSON</span>
             </div>
-            <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              <div className="text-3xl font-bold text-yellow-300">100%</div>
-              <div className="text-sm">Privacy Compliant</div>
+            <div className="flex-1 brutalist-border bg-yellow-100 p-6 text-left">
+              <p className="text-black font-mono text-sm leading-relaxed">
+                {`{
+  "status": "queued",
+  "accepted": true,
+  "ingested_at": "2024-06-12T14:21:04Z"
+}`}
+                <span className="text-black/60 block mt-6 text-xs uppercase tracking-[0.3em]">
+                  Click “Try it locally” to stream the full payload.
+                </span>
+              </p>
             </div>
           </div>
         </div>

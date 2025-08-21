@@ -4,96 +4,130 @@ import { useState } from 'react'
 
 export default function EmailCapture() {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [name, setName] = useState('')
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle')
   const [message, setMessage] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('loading')
-    
-    // TODO: Replace with actual email capture service (Mailchimp, ConvertKit, etc.)
+
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      // For now, just show success
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, name }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to subscribe')
+      }
+
       setStatus('success')
-      setMessage('Thanks for your interest! We\'ll notify you when Zero Analytics is ready.')
+      setMessage(
+        "Thanks for your interest! We'll notify you when Zero Analytics is ready."
+      )
       setEmail('')
-    } catch (error) {
+    } catch {
       setStatus('error')
       setMessage('Something went wrong. Please try again.')
     }
   }
 
   return (
-    <section id="early-access" className="section-padding bg-primary-900">
-      <div className="container-max">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Get Early Access
-          </h2>
-          <p className="text-lg text-primary-100 mb-8">
-            Be the first to know when Zero Analytics launches. 
-            Join our waiting list for exclusive early access.
-          </p>
-          
-          <div className="bg-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="email" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="Enter your email address"
-                  disabled={status === 'loading'}
-                />
-              </div>
-              
-              <button
-                type="submit"
-                disabled={status === 'loading' || !email}
-                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {status === 'loading' ? 'Joining...' : 'Join Waiting List'}
-              </button>
-            </form>
-            
-            {message && (
-              <div className={`mt-4 p-3 rounded-lg text-sm ${
-                status === 'success' 
-                  ? 'bg-green-100 text-green-800' 
-                  : 'bg-red-100 text-red-800'
-              }`}>
-                {message}
-              </div>
-            )}
-            
-            <p className="text-xs text-gray-500 mt-4">
-              We respect your privacy. Unsubscribe at any time.
+    <section
+      id="early-access"
+      className="section-padding border-b-2 border-black"
+      style={{ backgroundColor: 'var(--color-pink)' }}
+    >
+      <div className="container-max px-0">
+        <div className="max-w-screen-md mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-8 uppercase tracking-tight font-sans">
+              Join the first cohort of Zero Analytics operators
+            </h2>
+            <p className="text-xl text-black mb-10 font-bold">
+              Receive the same migration checklist we used to move beta teams
+              off GA, hear from the two of us when ships go live, and get honest
+              notes about what still needs work.
             </p>
-          </div>
-          
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-primary-100">
-            <div>
-              <h3 className="font-semibold mb-2">Open Source</h3>
-              <p className="text-sm">Full source code available on GitHub</p>
+            <div className="bg-gray-100 p-10 card max-w-md mx-auto">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="sr-only">
+                    Name (optional)
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full px-6 py-4 border-2 border-black bg-white text-black font-extrabold text-lg rounded-none focus:outline-none focus:ring-4 focus:ring-gray-300 focus:border-black"
+                    placeholder="Your name (optional)"
+                    disabled={status === 'loading'}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="sr-only">
+                    Email address
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full px-6 py-4 border-2 border-black bg-white text-black font-extrabold text-lg rounded-none focus:outline-none focus:ring-4 focus:ring-gray-300 focus:border-black"
+                    placeholder="Enter your email address"
+                    disabled={status === 'loading'}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={status === 'loading' || !email}
+                  className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed text-2xl"
+                >
+                  {status === 'loading' ? 'Joining...' : 'Join Waitlist →'}
+                </button>
+              </form>
+              {message && (
+                <div
+                  className={`mt-6 p-4 card text-lg font-bold ${status === 'success' ? 'bg-gray-200 text-black' : 'bg-gray-300 text-black'}`}
+                >
+                  {message}
+                </div>
+              )}
+              <p className="text-xs text-black mt-6 font-bold">
+                We respect your privacy. Unsubscribe at any time.
+              </p>
             </div>
-            <div>
-              <h3 className="font-semibold mb-2">Self-Hosted</h3>
-              <p className="text-sm">Deploy on your own infrastructure</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Managed Service</h3>
-              <p className="text-sm">Or use our hosted solution</p>
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-black">
+              <div className="card p-6 bg-gray-100">
+                <h3 className="font-extrabold mb-2 uppercase">Open Source</h3>
+                <p className="text-lg font-bold">
+                  Full source code available on GitHub
+                </p>
+              </div>
+              <div className="card p-6 bg-gray-100">
+                <h3 className="font-extrabold mb-2 uppercase">Self-Hosted</h3>
+                <p className="text-lg font-bold">
+                  Deploy on your own infrastructure
+                </p>
+              </div>
+              <div className="card p-6 bg-gray-100">
+                <h3 className="font-extrabold mb-2 uppercase">
+                  Managed Service
+                </h3>
+                <p className="text-lg font-bold">Or use our hosted solution</p>
+              </div>
             </div>
           </div>
         </div>
