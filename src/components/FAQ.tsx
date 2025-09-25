@@ -4,19 +4,20 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: 'How is this different from Google Analytics or product suites like Rybbit?',
+    question:
+      'How is this different from Google Analytics or product suites like Rybbit?',
     answer:
       "Zero deploys in 30 seconds as a single binary. You get privacy-native metrics without adopting funnels, replays, or managed dashboards you don't need.",
   },
   {
     question: 'Is this really GDPR compliant?',
     answer:
-      "Yes. DNT and GPC headers pause collection automatically, IPs are anonymised, and visitor salts stay on your hardware. No consent banners required.",
+      'Yes. DNT and GPC headers pause collection automatically, IPs are anonymised, and visitor salts stay on your hardware. No consent banners required.',
   },
   {
     question: 'What happens when I get a lot of traffic?',
     answer:
-      "Flip on ClickHouse dual-write—either self-managed or on our hosted tier—without touching your integration. The data model stays identical.",
+      'Flip on ClickHouse dual-write—either self-managed or on our hosted tier—without touching your integration. The data model stays identical.',
   },
   {
     question: 'Can I self-host this?',

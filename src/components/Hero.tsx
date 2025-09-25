@@ -18,10 +18,10 @@ export default function Hero() {
             Deploy analytics with zero infrastructure friction
           </h1>
           <p className="mt-6 text-lg sm:text-2xl text-black font-semibold max-w-3xl mx-auto leading-relaxed">
-            Ship the single Go binary, honour DNT/GPC out of the box, and rely on
-            the built-in queue so traffic keeps flowing even when your network
-            doesn&apos;t. Start self-hosted today and flip to managed ClickHouse when
-            you actually need it.
+            Ship the single Go binary, honour DNT/GPC out of the box, and rely
+            on the built-in queue so traffic keeps flowing even when your
+            network doesn&apos;t. Start self-hosted today and flip to managed
+            ClickHouse when you actually need it.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

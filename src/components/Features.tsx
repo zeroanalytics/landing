@@ -35,7 +35,8 @@ export default function Features() {
               Built to give small teams bigger insights
             </h2>
             <p className="text-xl text-black max-w-2xl mx-auto font-bold uppercase tracking-wide">
-              Keep the script tiny, the data private, and the upgrade path in your control.
+              Keep the script tiny, the data private, and the upgrade path in
+              your control.
             </p>
           </div>
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 items-stretch">

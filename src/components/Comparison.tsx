@@ -4,7 +4,8 @@ const rows = [
   {
     label: 'Setup time',
     self: 'Run the single binary, copy the script tag, respect DNT by default.',
-    hosted: 'Provisioned for you with managed ClickHouse and privacy defaults intact.',
+    hosted:
+      'Provisioned for you with managed ClickHouse and privacy defaults intact.',
   },
   {
     label: 'Scaling',
