@@ -4,19 +4,19 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: 'How is this different from Google Analytics?',
+    question: 'How is this different from Google Analytics or product suites like Rybbit?',
     answer:
-      "Zero Analytics deploys in 30 seconds with zero infrastructure. No complex setup, no privacy concerns, no massive JavaScript bundle slowing your site. Just copy one script tag and you're done.",
+      "Zero deploys in 30 seconds as a single binary. You get privacy-native metrics without adopting funnels, replays, or managed dashboards you don't need.",
   },
   {
     question: 'Is this really GDPR compliant?',
     answer:
-      "Yes, 100%. We don't use cookies, don't track personal data, and anonymize all visitor information by design. No privacy banners or consent forms needed.",
+      "Yes. DNT and GPC headers pause collection automatically, IPs are anonymised, and visitor salts stay on your hardware. No consent banners required.",
   },
   {
     question: 'What happens when I get a lot of traffic?',
     answer:
-      "Zero Analytics automatically scales from SQLite to ClickHouse when needed. You'll never hit performance walls or need to migrate manually.",
+      "Flip on ClickHouse dual-write—either self-managed or on our hosted tier—without touching your integration. The data model stays identical.",
   },
   {
     question: 'Can I self-host this?',
@@ -26,12 +26,12 @@ const faqs = [
   {
     question: 'How accurate is the data compared to Google Analytics?',
     answer:
-      'More accurate for real users. We filter out bots and scrapers automatically, so you see genuine human traffic without the noise.',
+      'More accurate for real users. We filter bots, respect do-not-track, and never trust proxy headers unless you explicitly enable them.',
   },
   {
     question: 'What if I need more advanced features?',
     answer:
-      'Zero Analytics includes custom events, goal tracking, and performance monitoring out of the box. For enterprise features, we offer paid tiers.',
+      'Zero focuses on self-serve metrics, consent-friendly data, and resilience. If you later need heavy product analytics, you can still export the same ClickHouse tables elsewhere.',
   },
 ]
 

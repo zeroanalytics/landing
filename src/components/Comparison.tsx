@@ -3,8 +3,8 @@ import Link from 'next/link'
 const rows = [
   {
     label: 'Setup time',
-    self: 'Run the bundled binary and copy the script tag.',
-    hosted: 'Provisioned for you with managed ClickHouse.',
+    self: 'Run the single binary, copy the script tag, respect DNT by default.',
+    hosted: 'Provisioned for you with managed ClickHouse and privacy defaults intact.',
   },
   {
     label: 'Scaling',
@@ -29,6 +29,12 @@ const rows = [
     self: 'Zero monthly invoice -- run it on your own SQLite instance for free.',
     hosted: 'Flat early-access pricing while we polish metered billing.',
   },
+  {
+    label: 'Versus product suites',
+    self: 'Drop in Zero when Rybbit or Pirsch feels like overkill and you still want to own the stack.',
+    hosted:
+      'Keep the same privacy-first data model while we run the infrastructure—no funnel or replay bloat required.',
+  },
 ]
 
 export default function Comparison() {
@@ -41,11 +47,12 @@ export default function Comparison() {
         <div className="max-w-screen-lg mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-black uppercase tracking-tight font-sans mb-6">
-              Scale on your timeline
+              Stay self-hosted, upgrade when you choose
             </h2>
             <p className="text-xl text-black font-bold uppercase tracking-wide max-w-3xl mx-auto">
-              Start on your own infrastructure today, and step up to our hosted
-              cluster when you need it.
+              Start on your infrastructure today, and step up to our hosted
+              cluster when ops or compliance calls for it—without jumping to a
+              heavyweight suite.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

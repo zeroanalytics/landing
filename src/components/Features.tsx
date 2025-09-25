@@ -1,23 +1,23 @@
 const features = [
   {
-    title: 'Tiny footprint',
+    title: 'Compliance on autopilot',
     description:
-      'Ship a 3 KB async module script that keeps Lighthouse scores happy and disappears when disabled.',
+      'Respect DNT/GPC headers, anonymise IPs, and keep visitor hashing salts in your hands—no extra toggles or consent banners required.',
   },
   {
-    title: 'Richer out-of-the-box data',
+    title: 'Zero-to-ClickHouse path',
     description:
-      'Capture paths, referrers, campaigns, and timing in the same stream so you skip custom plumbing.',
+      'Start on the embedded SQLite store and flip on managed ClickHouse without refactoring when traffic or retention windows expand.',
   },
   {
-    title: 'Spend stays yours',
+    title: 'Resilient by design',
     description:
-      'Run the bundled SQLite binary for free, then toggle ClickHouse dual-write only when you actually need scale.',
+      'The SDK queues retryable events, the server handles graceful shutdown, and proxy trust stays off unless you enable it.',
   },
   {
-    title: 'Indie-paced roadmap',
+    title: 'Different from product suites',
     description:
-      'We ship weekly. Feature requests land fast, not in a quarterly enterprise queue.',
+      'Rybbit and Pirsch chase funnels and replays; Zero doubles down on fast deployment and ownership for small engineering teams.',
   },
 ]
 
@@ -35,7 +35,7 @@ export default function Features() {
               Built to give small teams bigger insights
             </h2>
             <p className="text-xl text-black max-w-2xl mx-auto font-bold uppercase tracking-wide">
-              Keep the script tiny, the data rich, and the bill predictable.
+              Keep the script tiny, the data private, and the upgrade path in your control.
             </p>
           </div>
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 items-stretch">

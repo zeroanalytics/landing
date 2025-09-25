@@ -12,23 +12,23 @@ export default function Hero() {
             className="inline-flex items-center gap-3 px-6 py-3 bg-white brutalist-border uppercase text-xs sm:text-sm tracking-[0.35em] font-extrabold mb-8"
             style={{ boxShadow: '8px 8px 0 0 #000' }}
           >
-            <span className="text-black">
-              Ship analytics your team can actually run
-            </span>
+            <span className="text-black">Privacy-native. SRE approved.</span>
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl text-black leading-tight tracking-tight">
-            Launch lightweight analytics this afternoon
+            Deploy analytics with zero infrastructure friction
           </h1>
           <p className="mt-6 text-lg sm:text-2xl text-black font-semibold max-w-3xl mx-auto leading-relaxed">
-            Install the Zero CLI, drop in a 3 KB script, and keep richer traffic
-            data on your own hardware without paying enterprise bills.
+            Ship the single Go binary, honour DNT/GPC out of the box, and rely on
+            the built-in queue so traffic keeps flowing even when your network
+            doesn&apos;t. Start self-hosted today and flip to managed ClickHouse when
+            you actually need it.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/#early-access"
               className="btn btn-accent btn-lg w-full sm:w-auto"
             >
-              Launch the Zero CLI
+              Deploy the Zero binary
             </Link>
             <Link
               href="https://zeroanalytics.io/docs"
@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
           <p className="mt-6 text-xs sm:text-sm uppercase tracking-[0.3em] text-black/70 font-semibold">
             Works with static sites, SPAs, and server frameworks — no cookies,
-            no vendor SDK lock-in.
+            no vendor SDK lock-in, no proxy trust unless you ask for it.
           </p>
         </div>
 
