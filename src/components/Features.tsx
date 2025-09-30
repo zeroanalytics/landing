@@ -25,66 +25,75 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="section-padding border-b-2 border-black"
+      className="section-padding border-b-8 border-black"
       style={{ backgroundColor: 'var(--color-mint)' }}
     >
       <div className="container-max px-0">
-        <div className="max-w-screen-lg mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6 uppercase tracking-tight font-sans">
+        <div className="max-w-screen-xl mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-7xl font-black text-black mb-8 uppercase tracking-tighter font-sans">
               Built to give small teams bigger insights
             </h2>
-            <p className="text-xl text-black max-w-2xl mx-auto font-bold uppercase tracking-wide">
+            <p className="text-2xl md:text-3xl text-black max-w-3xl mx-auto font-bold tracking-wide leading-tight">
               Keep the script tiny, the data private, and the upgrade path in
               your control.
             </p>
           </div>
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 items-stretch">
-            <div className="card bg-gray-100 p-8 flex flex-col gap-6 xl:col-span-2">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {features.map((feature) => (
-                  <div key={feature.title}>
-                    <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-2">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-stretch">
+            <div
+              className="card bg-white p-10 flex flex-col gap-8 xl:col-span-2 transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
+              style={{ boxShadow: '12px 12px 0 0 #000' }}
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                {features.map((feature, index) => (
+                  <div key={feature.title} className="relative">
+                    <div className="absolute -top-2 -left-2 text-6xl font-black text-black/5">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-black uppercase tracking-tight font-sans mb-4 relative z-10">
                       {feature.title}
                     </h3>
-                    <p className="text-lg text-black font-bold leading-relaxed">
+                    <p className="text-lg md:text-xl text-black font-bold leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="card bg-white border-2 border-black p-8 flex flex-col justify-between">
+            <div
+              className="card bg-white border-2 border-black p-10 flex flex-col justify-between transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
+              style={{ boxShadow: '12px 12px 0 0 #000' }}
+            >
               <div>
-                <h3 className="text-2xl font-extrabold text-black uppercase tracking-tight font-sans mb-4">
+                <h3 className="text-3xl font-black text-black uppercase tracking-tight font-sans mb-6 pb-4 border-b-4 border-black">
                   Live preview
                 </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between border-b-2 border-black pb-2">
-                    <span className="text-lg font-bold uppercase">
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between border-b-4 border-black pb-3">
+                    <span className="text-lg font-extrabold uppercase tracking-wide">
                       Pageviews (24h)
                     </span>
-                    <span className="text-2xl font-extrabold">12,430</span>
+                    <span className="text-4xl font-black">12,430</span>
                   </div>
-                  <div className="flex items-center justify-between border-b-2 border-black pb-2">
-                    <span className="text-lg font-bold uppercase">
+                  <div className="flex items-center justify-between border-b-4 border-black pb-3">
+                    <span className="text-lg font-extrabold uppercase tracking-wide">
                       Conversion
                     </span>
-                    <span className="text-2xl font-extrabold text-green-600">
+                    <span className="text-4xl font-black text-green-600">
                       4.2%
                     </span>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-3 pt-2">
                     {['/', '/pricing', '/docs/getting-started'].map(
                       (path, index) => (
                         <div
                           key={path}
-                          className="flex items-center justify-between text-black font-bold"
+                          className="flex items-center justify-between text-black font-extrabold text-lg bg-gray-50 p-3 border-2 border-black"
                         >
-                          <span>
+                          <span className="uppercase tracking-wide">
                             {index + 1}. {path}
                           </span>
-                          <span>
+                          <span className="text-xl">
                             {[5421, 3180, 1812][index].toLocaleString()}
                           </span>
                         </div>
@@ -93,7 +102,7 @@ export default function Features() {
                   </div>
                 </div>
               </div>
-              <p className="text-sm text-black font-bold uppercase tracking-wide mt-6">
+              <p className="text-sm text-black/60 font-bold uppercase tracking-[0.35em] mt-8 pt-6 border-t-2 border-black/20">
                 Captured with the bundled dev server — no external services
                 required.
               </p>

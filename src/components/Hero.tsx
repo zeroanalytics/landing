@@ -3,56 +3,58 @@ import Link from 'next/link'
 export default function Hero() {
   return (
     <section
-      className="section-padding pt-28 pb-16 border-b-2 border-black min-h-[60vh]"
+      className="section-padding pt-32 pb-24 border-b-8 border-black min-h-[70vh] flex items-center"
       style={{ backgroundColor: 'var(--color-yellow)' }}
     >
-      <div className="container-max px-0">
-        <div className="max-w-5xl mx-auto text-center px-4">
+      <div className="container-max px-0 w-full">
+        <div className="max-w-6xl mx-auto text-center px-4">
           <div
-            className="inline-flex items-center gap-3 px-6 py-3 bg-white brutalist-border uppercase text-xs sm:text-sm tracking-[0.35em] font-extrabold mb-8"
-            style={{ boxShadow: '8px 8px 0 0 #000' }}
+            className="inline-flex items-center gap-3 px-8 py-4 bg-white brutalist-border uppercase text-sm tracking-[0.4em] font-extrabold mb-10 transform hover:translate-y-[-2px] transition-transform"
+            style={{ boxShadow: '12px 12px 0 0 #000' }}
           >
             <span className="text-black">Privacy-native. SRE approved.</span>
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl text-black leading-tight tracking-tight">
             Deploy analytics with zero infrastructure friction
           </h1>
-          <p className="mt-6 text-lg sm:text-2xl text-black font-semibold max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg sm:text-2xl text-black font-bold max-w-4xl mx-auto leading-relaxed">
             Ship the single Go binary, honour DNT/GPC out of the box, and rely
             on the built-in queue so traffic keeps flowing even when your
             network doesn&apos;t. Start self-hosted today and flip to managed
             ClickHouse when you actually need it.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
               href="/#early-access"
-              className="btn btn-accent btn-lg w-full sm:w-auto"
+              className="btn btn-accent btn-lg w-full sm:w-auto text-xl px-10 py-5 transform hover:translate-x-1 hover:translate-y-1 transition-transform"
+              style={{ boxShadow: '6px 6px 0 0 #000' }}
             >
               Deploy the Zero binary
             </Link>
             <Link
               href="https://zeroanalytics.io/docs"
-              className="btn btn-ghost btn-lg w-full sm:w-auto bg-white hover:bg-yellow-200"
+              className="btn btn-ghost btn-lg w-full sm:w-auto text-xl px-10 py-5 bg-white hover:bg-yellow-400 transform hover:translate-x-1 hover:translate-y-1 transition-transform"
+              style={{ boxShadow: '6px 6px 0 0 #000' }}
             >
               Browse the Docs
             </Link>
           </div>
-          <p className="mt-6 text-xs sm:text-sm uppercase tracking-[0.3em] text-black/70 font-semibold">
+          <p className="mt-8 text-sm uppercase tracking-[0.35em] text-black/60 font-bold">
             Works with static sites, SPAs, and server frameworks — no cookies,
             no vendor SDK lock-in, no proxy trust unless you ask for it.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-2 px-4">
+        <div className="mt-20 grid gap-10 lg:grid-cols-2 px-4">
           <div
-            className="bg-white brutalist-border p-6 sm:p-8 text-left"
-            style={{ boxShadow: '10px 10px 0 0 #000' }}
+            className="bg-white brutalist-border p-8 sm:p-10 text-left transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
+            style={{ boxShadow: '14px 14px 0 0 #000' }}
           >
-            <div className="flex items-center justify-between text-xs uppercase tracking-[0.35em] text-black/70 mb-4">
+            <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-black/60 font-extrabold mb-6">
               <span>Request</span>
-              <span>POST</span>
+              <span className="bg-black text-white px-3 py-1">POST</span>
             </div>
-            <pre className="text-sm sm:text-base font-mono leading-relaxed text-left text-black whitespace-pre-wrap">
+            <pre className="text-sm sm:text-base font-mono leading-relaxed text-left text-black whitespace-pre-wrap bg-gray-50 p-6 brutalist-border">
               {`fetch('https://localhost:3000/api/collect', {
   method: 'POST',
   headers: {
@@ -66,12 +68,15 @@ export default function Hero() {
   })
 })`}
             </pre>
-            <button className="mt-6 w-full btn btn-accent btn-lg">
+            <button
+              className="mt-8 w-full btn btn-accent btn-lg text-lg transform hover:translate-x-1 hover:translate-y-1 transition-transform"
+              style={{ boxShadow: '6px 6px 0 0 #000' }}
+            >
               Try it locally
             </button>
-            <p className="mt-3 text-xs text-black/70 font-semibold uppercase tracking-widest">
+            <p className="mt-3 text-xs text-black/70 font-bold uppercase tracking-[0.35em]">
               Demo preview — fire up{' '}
-              <code className="bg-yellow-200 px-2 py-1">
+              <code className="bg-yellow-200 px-2 py-1 border-2 border-black font-mono">
                 ./analytics serve --dev
               </code>{' '}
               to stream requests locally.
@@ -79,22 +84,22 @@ export default function Hero() {
           </div>
 
           <div
-            className="bg-white brutalist-border p-6 sm:p-8 flex flex-col"
-            style={{ boxShadow: '10px 10px 0 0 #000' }}
+            className="bg-white brutalist-border p-8 sm:p-10 flex flex-col transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
+            style={{ boxShadow: '14px 14px 0 0 #000' }}
           >
-            <div className="flex items-center justify-between text-xs uppercase tracking-[0.35em] text-black/70 mb-4">
+            <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-black/60 font-extrabold mb-6">
               <span>Live Response</span>
-              <span>JSON</span>
+              <span className="bg-black text-white px-3 py-1">JSON</span>
             </div>
-            <div className="flex-1 brutalist-border bg-yellow-100 p-6 text-left">
-              <p className="text-black font-mono text-sm leading-relaxed">
+            <div className="flex-1 brutalist-border bg-yellow-100 p-8 text-left">
+              <p className="text-black font-mono text-base leading-relaxed">
                 {`{
   "status": "queued",
   "accepted": true,
   "ingested_at": "2024-06-12T14:21:04Z"
 }`}
-                <span className="text-black/60 block mt-6 text-xs uppercase tracking-[0.3em]">
-                  Click “Try it locally” to stream the full payload.
+                <span className="text-black/60 block mt-8 text-xs uppercase tracking-[0.35em] font-bold">
+                  Click &#34;Try it locally&#34; to stream the full payload.
                 </span>
               </p>
             </div>

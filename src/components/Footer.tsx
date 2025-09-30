@@ -1,30 +1,31 @@
 export default function Footer() {
   return (
     <footer
-      className="text-black border-t-2 border-black/90"
+      className="text-black border-t-8 border-black"
       style={{ backgroundColor: 'var(--color-yellow)' }}
     >
       <div className="container-max px-4 sm:px-6 lg:px-8">
-        <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="py-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-black mb-4 uppercase font-sans tracking-tighter">
+              <h3 className="text-3xl sm:text-4xl font-black text-black mb-6 uppercase font-sans tracking-tighter">
                 Zero Analytics
               </h3>
-              <p className="text-lg font-bold mb-6 max-w-md">
+              <p className="text-xl font-bold mb-8 max-w-md leading-relaxed">
                 Privacy-first analytics platform that deploys in 30 seconds with
                 zero external dependencies.
               </p>
               <div className="flex space-x-4 mb-6">
                 <a
                   href="https://github.com/zeroanalytics"
-                  className="text-black hover:text-black border-2 border-black p-2 bg-white hover:border-[var(--color-accent)]"
+                  className="text-black hover:text-black border-4 border-black p-3 bg-white hover:bg-black hover:text-white transition-colors transform hover:translate-x-1 hover:translate-y-1"
+                  style={{ boxShadow: '4px 4px 0 0 #000' }}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span className="sr-only">GitHub</span>
                   <svg
-                    className="h-6 w-6"
+                    className="h-7 w-7"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -37,13 +38,14 @@ export default function Footer() {
                 </a>
                 <a
                   href="https://twitter.com/zeroanalytics"
-                  className="text-black hover:text-white border-2 border-black p-2 bg-white"
+                  className="text-black hover:text-white border-4 border-black p-3 bg-white hover:bg-black transition-colors transform hover:translate-x-1 hover:translate-y-1"
+                  style={{ boxShadow: '4px 4px 0 0 #000' }}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span className="sr-only">Twitter</span>
                   <svg
-                    className="h-6 w-6"
+                    className="h-7 w-7"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -53,14 +55,14 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-extrabold text-black uppercase mb-4">
+              <h3 className="text-xl font-black text-black uppercase mb-6 tracking-tight">
                 Links
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 <li>
                   <a
                     href="#features"
-                    className="text-black font-bold border-b-2 border-black hover:border-[var(--color-accent)]"
+                    className="text-lg text-black font-extrabold border-b-4 border-black hover:border-transparent transition-all inline-block"
                   >
                     Features
                   </a>
@@ -68,7 +70,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="https://github.com/zeroanalytics/analytics"
-                    className="text-black font-bold border-b-2 border-black hover:border-[var(--color-accent)]"
+                    className="text-lg text-black font-extrabold border-b-4 border-black hover:border-transparent transition-all inline-block"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -78,7 +80,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="https://github.com/zeroanalytics/tracker"
-                    className="text-black font-bold border-b-2 border-black hover:border-[var(--color-accent)]"
+                    className="text-lg text-black font-extrabold border-b-4 border-black hover:border-transparent transition-all inline-block"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -89,12 +91,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t-2 border-black/90 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-black text-lg font-bold">
+        <div className="border-t-4 border-black py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-black text-xl font-black uppercase tracking-wide">
               © {new Date().getFullYear()} Ø Analytics. All rights reserved.
             </p>
-            <p className="text-black text-lg font-bold mt-2 md:mt-0">
+            <p className="text-black text-xl font-black uppercase tracking-wide">
               Built with privacy in mind.
             </p>
           </div>

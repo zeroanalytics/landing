@@ -7,14 +7,14 @@ export default function Header() {
 
   return (
     <header
-      className="fixed w-full top-0 z-50"
+      className="fixed w-full top-0 z-50 border-b-4 border-black"
       style={{ backgroundColor: 'var(--color-yellow)' }}
     >
       <div className="container-max">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tighter uppercase font-sans">
+              <h1 className="text-3xl sm:text-4xl font-black text-black tracking-tighter uppercase font-sans">
                 Zero Analytics
               </h1>
             </div>
@@ -23,8 +23,11 @@ export default function Header() {
             <div className="ml-10 flex items-baseline space-x-4">
               <a
                 href="https://github.com/zeroanalytics"
-                className="btn btn-sm text-black border-black"
-                style={{ backgroundColor: 'var(--color-button)' }}
+                className="btn btn-sm text-black border-black transform hover:translate-x-1 hover:translate-y-1 transition-transform"
+                style={{
+                  backgroundColor: 'var(--color-button)',
+                  boxShadow: '4px 4px 0 0 #000',
+                }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -35,26 +38,25 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 border-2 border-black text-black bg-white focus:outline-none hover:border-[var(--color-accent)]"
+              className="inline-flex items-center justify-center p-3 border-4 border-black text-black bg-white focus:outline-none hover:bg-gray-100 transition-colors"
             >
               <svg
                 className="h-8 w-8"
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 24 24"
+                strokeWidth="4"
               >
                 {isMenuOpen ? (
                   <path
                     strokeLinecap="square"
                     strokeLinejoin="miter"
-                    strokeWidth="3"
                     d="M6 18L18 6M6 6l12 12"
                   />
                 ) : (
                   <path
                     strokeLinecap="square"
                     strokeLinejoin="miter"
-                    strokeWidth="3"
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 )}
@@ -64,19 +66,22 @@ export default function Header() {
         </div>
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t-2 border-black">
+            <div className="px-4 pt-4 pb-6 space-y-3 bg-white border-t-4 border-black">
               <a
                 href="https://github.com/zeroanalytics"
                 className="block btn btn-md w-full text-center text-black border-black"
-                style={{ backgroundColor: 'var(--color-button)' }}
+                style={{
+                  backgroundColor: 'var(--color-button)',
+                  boxShadow: '4px 4px 0 0 #000',
+                }}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
                 title="GitHub"
               >
-                <span className="inline-flex items-center justify-center">
+                <span className="inline-flex items-center justify-center gap-2">
                   <svg
-                    className="h-5 w-5"
+                    className="h-6 w-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -87,6 +92,7 @@ export default function Header() {
                       clipRule="evenodd"
                     />
                   </svg>
+                  GitHub
                 </span>
               </a>
             </div>
