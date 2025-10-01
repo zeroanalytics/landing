@@ -25,8 +25,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="section-padding border-b-8 border-black"
-      style={{ backgroundColor: 'var(--color-mint)' }}
+      className="section-padding border-b-8 border-black bg-brand-mint"
     >
       <div className="container-max px-0">
         <div className="max-w-screen-xl mx-auto px-4">
@@ -40,10 +39,7 @@ export default function Features() {
             </p>
           </div>
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-stretch">
-            <div
-              className="card bg-white p-10 flex flex-col gap-8 xl:col-span-2 transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
-              style={{ boxShadow: '12px 12px 0 0 #000' }}
-            >
+            <div className="card bg-white p-10 flex flex-col gap-8 xl:col-span-2 transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform brutal-shadow-md">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                 {features.map((feature, index) => (
                   <div key={feature.title} className="relative">
@@ -60,10 +56,7 @@ export default function Features() {
                 ))}
               </div>
             </div>
-            <div
-              className="card bg-white border-2 border-black p-10 flex flex-col justify-between transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
-              style={{ boxShadow: '12px 12px 0 0 #000' }}
-            >
+            <div className="card bg-white border-2 border-black p-10 flex flex-col justify-between transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform brutal-shadow-md">
               <div>
                 <h3 className="text-3xl font-black text-black uppercase tracking-tight font-sans mb-6 pb-4 border-b-4 border-black">
                   Live preview

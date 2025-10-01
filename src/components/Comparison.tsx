@@ -40,10 +40,7 @@ const rows = [
 
 export default function Comparison() {
   return (
-    <section
-      className="section-padding border-b-8 border-black"
-      style={{ backgroundColor: 'var(--color-mint)' }}
-    >
+    <section className="section-padding border-b-8 border-black bg-brand-mint">
       <div className="container-max px-0">
         <div className="max-w-screen-xl mx-auto px-4">
           <div className="text-center mb-20">
@@ -57,10 +54,7 @@ export default function Comparison() {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div
-              className="card bg-white border-4 border-black p-10 transform hover:translate-x-[-3px] hover:translate-y-[-3px] transition-transform"
-              style={{ boxShadow: '16px 16px 0 0 #000' }}
-            >
+            <div className="card bg-white border-4 border-black p-10 transform hover:translate-x-[-3px] hover:translate-y-[-3px] transition-transform brutal-shadow-xl">
               <div className="mb-8 pb-6 border-b-4 border-black">
                 <h3 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tight mb-3">
                   Self-hosted
@@ -86,17 +80,15 @@ export default function Comparison() {
                 ))}
               </ul>
               <Link
-                href="/#early-access"
-                className="w-full inline-flex items-center justify-center px-6 py-4 text-base md:text-lg font-black uppercase brutalist-border bg-white hover:bg-yellow-100 transform hover:translate-x-1 hover:translate-y-1 transition-transform"
-                style={{ boxShadow: '6px 6px 0 0 #000' }}
+                href="https://github.com/zeroanalytics/analytics/releases/latest"
+                className="w-full inline-flex items-center justify-center px-6 py-4 text-base md:text-lg font-black uppercase brutalist-border bg-white hover:bg-yellow-100 transform hover:translate-x-1 hover:translate-y-1 transition-transform brutal-shadow-sm"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Download the self-host starter kit →
               </Link>
             </div>
-            <div
-              className="card bg-black border-4 border-black p-10 text-white transform hover:translate-x-[-3px] hover:translate-y-[-3px] transition-transform"
-              style={{ boxShadow: '16px 16px 0 0 var(--color-button)' }}
-            >
+            <div className="card bg-black border-4 border-black p-10 text-white transform hover:translate-x-[-3px] hover:translate-y-[-3px] transition-transform brutal-shadow-xl-accent">
               <div className="mb-8 pb-6 border-b-4 border-white">
                 <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-3">
                   Hosted
@@ -123,8 +115,7 @@ export default function Comparison() {
               </ul>
               <a
                 href="mailto:hello@zeroanalytics.io"
-                className="w-full inline-flex items-center justify-center px-6 py-4 text-base md:text-lg font-black uppercase brutalist-border border-white bg-white text-black hover:bg-yellow-100 transform hover:translate-x-1 hover:translate-y-1 transition-transform"
-                style={{ boxShadow: '6px 6px 0 0 var(--color-button)' }}
+                className="w-full inline-flex items-center justify-center px-6 py-4 text-base md:text-lg font-black uppercase brutalist-border border-white bg-white text-black hover:bg-yellow-100 transform hover:translate-x-1 hover:translate-y-1 transition-transform brutal-shadow-accent"
               >
                 Chat with the builders →
               </a>

@@ -94,6 +94,58 @@
     @apply btn btn-accent btn-md;
   }
 
+  .bg-brand-yellow {
+    background-color: var(--color-yellow);
+  }
+
+  .bg-brand-mint {
+    background-color: var(--color-mint);
+  }
+
+  .bg-brand-teal {
+    background-color: var(--color-teal);
+  }
+
+  .bg-brand-pink {
+    background-color: var(--color-pink);
+  }
+
+  .brutal-shadow-xs {
+    box-shadow: 4px 4px 0 0 #000;
+  }
+
+  .brutal-shadow-sm {
+    box-shadow: 6px 6px 0 0 #000;
+  }
+
+  .brutal-shadow-md {
+    box-shadow: 12px 12px 0 0 #000;
+  }
+
+  .brutal-shadow-lg {
+    box-shadow: 14px 14px 0 0 #000;
+  }
+
+  .brutal-shadow-xl {
+    box-shadow: 16px 16px 0 0 #000;
+  }
+
+  .brutal-shadow-accent {
+    box-shadow: 6px 6px 0 0 var(--color-button);
+  }
+
+  .brutal-shadow-xl-accent {
+    box-shadow: 16px 16px 0 0 var(--color-button);
+  }
+
+  .brutal-shadow-faq {
+    box-shadow: 8px 8px 0 0 #000;
+  }
+
+  .brutal-shadow-faq-open {
+    box-shadow: 10px 10px 0 0 #000;
+  }
+
   a {
     @apply no-underline transition-all duration-200;
   }

@@ -1,9 +1,6 @@
 export default function Footer() {
   return (
-    <footer
-      className="text-black border-t-8 border-black"
-      style={{ backgroundColor: 'var(--color-yellow)' }}
-    >
+    <footer className="text-black border-t-8 border-black bg-brand-yellow">
       <div className="container-max px-4 sm:px-6 lg:px-8">
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -18,8 +15,7 @@ export default function Footer() {
               <div className="flex space-x-4 mb-6">
                 <a
                   href="https://github.com/zeroanalytics"
-                  className="text-black hover:text-black border-4 border-black p-3 bg-white hover:bg-black hover:text-white transition-colors transform hover:translate-x-1 hover:translate-y-1"
-                  style={{ boxShadow: '4px 4px 0 0 #000' }}
+                  className="text-black hover:text-black border-4 border-black p-3 bg-white hover:bg-black hover:text-white transition-colors transform hover:translate-x-1 hover:translate-y-1 brutal-shadow-xs"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -38,8 +34,7 @@ export default function Footer() {
                 </a>
                 <a
                   href="https://twitter.com/zeroanalytics"
-                  className="text-black hover:text-white border-4 border-black p-3 bg-white hover:bg-black transition-colors transform hover:translate-x-1 hover:translate-y-1"
-                  style={{ boxShadow: '4px 4px 0 0 #000' }}
+                  className="text-black hover:text-white border-4 border-black p-3 bg-white hover:bg-black transition-colors transform hover:translate-x-1 hover:translate-y-1 brutal-shadow-xs"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

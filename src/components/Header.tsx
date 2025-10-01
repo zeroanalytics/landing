@@ -6,10 +6,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header
-      className="fixed w-full top-0 z-50 border-b-4 border-black"
-      style={{ backgroundColor: 'var(--color-yellow)' }}
-    >
+    <header className="fixed w-full top-0 z-50 border-b-4 border-black bg-brand-yellow">
       <div className="container-max">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
@@ -23,11 +20,7 @@ export default function Header() {
             <div className="ml-10 flex items-baseline space-x-4">
               <a
                 href="https://github.com/zeroanalytics"
-                className="btn btn-sm text-black border-black transform hover:translate-x-1 hover:translate-y-1 transition-transform"
-                style={{
-                  backgroundColor: 'var(--color-button)',
-                  boxShadow: '4px 4px 0 0 #000',
-                }}
+                className="btn btn-sm text-black border-black transform hover:translate-x-1 hover:translate-y-1 transition-transform brutal-shadow-xs"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -69,11 +62,7 @@ export default function Header() {
             <div className="px-4 pt-4 pb-6 space-y-3 bg-white border-t-4 border-black">
               <a
                 href="https://github.com/zeroanalytics"
-                className="block btn btn-md w-full text-center text-black border-black"
-                style={{
-                  backgroundColor: 'var(--color-button)',
-                  boxShadow: '4px 4px 0 0 #000',
-                }}
+                className="block btn btn-md w-full text-center text-black border-black brutal-shadow-xs"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"

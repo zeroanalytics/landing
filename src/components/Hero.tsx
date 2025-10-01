@@ -2,16 +2,10 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section
-      className="section-padding pt-32 pb-24 border-b-8 border-black min-h-[70vh] flex items-center"
-      style={{ backgroundColor: 'var(--color-yellow)' }}
-    >
+    <section className="section-padding pt-32 pb-24 border-b-8 border-black min-h-[70vh] flex items-center bg-brand-yellow">
       <div className="container-max px-0 w-full">
         <div className="max-w-6xl mx-auto text-center px-4">
-          <div
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white brutalist-border uppercase text-sm tracking-[0.4em] font-extrabold mb-10 transform hover:translate-y-[-2px] transition-transform"
-            style={{ boxShadow: '12px 12px 0 0 #000' }}
-          >
+          <div className="inline-flex items-center gap-3 px-8 py-4 bg-white brutalist-border uppercase text-sm tracking-[0.4em] font-extrabold mb-10 transform hover:translate-y-[-2px] transition-transform brutal-shadow-md">
             <span className="text-black">Privacy-native. SRE approved.</span>
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl text-black leading-tight tracking-tight">
@@ -25,16 +19,16 @@ export default function Hero() {
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
-              href="/#early-access"
-              className="btn btn-accent btn-lg w-full sm:w-auto text-xl px-10 py-5 transform hover:translate-x-1 hover:translate-y-1 transition-transform"
-              style={{ boxShadow: '6px 6px 0 0 #000' }}
+              href="https://github.com/zeroanalytics/analytics/releases/latest"
+              className="btn btn-accent btn-lg w-full sm:w-auto text-xl px-10 py-5 transform hover:translate-x-1 hover:translate-y-1 transition-transform brutal-shadow-sm"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Deploy the Zero binary
+              Download the Zero binary
             </Link>
             <Link
               href="https://zeroanalytics.io/docs"
-              className="btn btn-ghost btn-lg w-full sm:w-auto text-xl px-10 py-5 bg-white hover:bg-yellow-400 transform hover:translate-x-1 hover:translate-y-1 transition-transform"
-              style={{ boxShadow: '6px 6px 0 0 #000' }}
+              className="btn btn-ghost btn-lg w-full sm:w-auto text-xl px-10 py-5 bg-white hover:bg-yellow-400 transform hover:translate-x-1 hover:translate-y-1 transition-transform brutal-shadow-sm"
             >
               Browse the Docs
             </Link>
@@ -46,10 +40,7 @@ export default function Hero() {
         </div>
 
         <div className="mt-20 grid gap-10 lg:grid-cols-2 px-4">
-          <div
-            className="bg-white brutalist-border p-8 sm:p-10 text-left transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
-            style={{ boxShadow: '14px 14px 0 0 #000' }}
-          >
+          <div className="bg-white brutalist-border p-8 sm:p-10 text-left transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform brutal-shadow-lg">
             <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-black/60 font-extrabold mb-6">
               <span>Request</span>
               <span className="bg-black text-white px-3 py-1">POST</span>
@@ -68,10 +59,7 @@ export default function Hero() {
   })
 })`}
             </pre>
-            <button
-              className="mt-8 w-full btn btn-accent btn-lg text-lg transform hover:translate-x-1 hover:translate-y-1 transition-transform"
-              style={{ boxShadow: '6px 6px 0 0 #000' }}
-            >
+            <button className="mt-8 w-full btn btn-accent btn-lg text-lg transform hover:translate-x-1 hover:translate-y-1 transition-transform brutal-shadow-sm">
               Try it locally
             </button>
             <p className="mt-3 text-xs text-black/70 font-bold uppercase tracking-[0.35em]">
@@ -83,10 +71,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <div
-            className="bg-white brutalist-border p-8 sm:p-10 flex flex-col transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
-            style={{ boxShadow: '14px 14px 0 0 #000' }}
-          >
+          <div className="bg-white brutalist-border p-8 sm:p-10 flex flex-col transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform brutal-shadow-lg">
             <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-black/60 font-extrabold mb-6">
               <span>Live Response</span>
               <span className="bg-black text-white px-3 py-1">JSON</span>

@@ -40,10 +40,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section
-      className="section-padding border-b-8 border-black"
-      style={{ backgroundColor: 'var(--color-teal)' }}
-    >
+    <section className="section-padding border-b-8 border-black bg-brand-teal">
       <div className="container-max px-0">
         <div className="max-w-screen-lg mx-auto px-4">
           <div className="text-center mb-20">
@@ -59,13 +56,7 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="brutalist-border bg-white border-4 transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
-                style={{
-                  boxShadow:
-                    openIndex === index
-                      ? '10px 10px 0 0 #000'
-                      : '8px 8px 0 0 #000',
-                }}
+                className={`brutalist-border bg-white border-4 transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all ${openIndex === index ? 'brutal-shadow-faq-open' : 'brutal-shadow-faq'}`}
               >
                 <button
                   className="w-full p-8 text-left flex justify-between items-start hover:bg-gray-50 transition-colors group"
@@ -92,17 +83,13 @@ export default function FAQ() {
           </div>
 
           <div className="mt-20 text-center">
-            <div
-              className="brutalist-border border-4 bg-white p-12 max-w-2xl mx-auto transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform"
-              style={{ boxShadow: '12px 12px 0 0 #000' }}
-            >
+            <div className="brutalist-border border-4 bg-white p-12 max-w-2xl mx-auto transform hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform brutal-shadow-md">
               <h3 className="text-3xl md:text-4xl font-black text-black mb-6 uppercase tracking-tight">
                 Still Have Questions?
               </h3>
               <a
                 href="mailto:hello@zeroanalytics.io"
-                className="btn-primary text-xl inline-flex items-center px-8 py-4 transform hover:translate-x-1 hover:translate-y-1 transition-transform"
-                style={{ boxShadow: '6px 6px 0 0 #000' }}
+                className="btn-primary text-xl inline-flex items-center px-8 py-4 transform hover:translate-x-1 hover:translate-y-1 transition-transform brutal-shadow-sm"
               >
                 Contact Us →
               </a>
